@@ -26,8 +26,10 @@ jobs:
         with:
           fetch-depth: 2  # need previous commit to diff for changed manifests
 
-      - name: Install ffmpeg + jq
-        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg jq
+      - name: Verify ffmpeg + jq
+        # Both tools are preinstalled on ubuntu-latest; running apt-get
+        # on this runner is slow and sometimes stalls, so we just check.
+        run: ffmpeg -version | head -1 && jq --version
 
       - name: Find pending manifests
         id: find
