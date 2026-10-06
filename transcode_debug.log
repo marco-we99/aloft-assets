@@ -1,0 +1,163 @@
++ echo 'MANIFESTS payload: [pending_aerials/sanfrancisco_01.json]'
+MANIFESTS payload: [pending_aerials/sanfrancisco_01.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/sanfrancisco_01.json ']'
++ '[' '!' -f pending_aerials/sanfrancisco_01.json ']'
++ echo '=== pending_aerials/sanfrancisco_01.json ==='
+=== pending_aerials/sanfrancisco_01.json ===
++ cat pending_aerials/sanfrancisco_01.json
+{
+  "slug": "sanfrancisco_01",
+  "aerials": [
+    {
+      "name": "golden_gate_bridge",
+      "url": "https://rr3---sn-ab5l6nrk.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapa4Erbhut0Pi5PksQs&ip=0.0.0.0&id=a639b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=2N&mm=31&mn=sn-ab5l6nrk&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8244301&dur=40.016&lmt=1683869529081840&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPezONIfpPernLixnoW6EVk2THUSEXyp7jp0qNZ37U_aAiBnmqDuojuS1om12KeXXkD5kwlRdu4HDgW2YPupYsFMTQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAOq_p_gBHNZqykb-TfWjPCt4JLrNWDUoRUIRQmGIs-uAAiEAoZffEXGW7sMkRcoWn_1mueP2TuYprz6SHDsbItnyMxA="
+    },
+    {
+      "name": "transamerica_pyramid",
+      "url": "https://rr5---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313208&ei=REPFarGjIZWPxtYP076n-Ao&ip=0.0.0.0&id=a74e250000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=fj&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227447&dur=40.016&lmt=1706576723755506&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMRlCttCDRX9uURpvoTU4uHW0Q7mWceBAtt-XSyLU1wCAiEAvYBCcKYlXgR5hri6BYjFqQCRAH7mFD7Ae7FsytM9KP8=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgVaoNDZScoTqa4F6a-9IAIkraSnK5M1pj7ZtF-iJXpUoCIANgDCugmHTKCbuCmVRhz96CGuEpQNEwf-pCnzCMbf-_"
+    },
+    {
+      "name": "coit_tower",
+      "url": "https://rr5---sn-ab5l6nk6.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapXtHeiukNQPtOHMoA4&ip=0.0.0.0&id=90f6b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=Jg&mm=31&mn=sn-ab5l6nk6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8240486&dur=40.016&lmt=1683869808351257&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPY6cI4BfBxXnfGGdAmpIueVET86QctQ5Xxyv0dtzimKAiBO3PF9E4RkBOQYlWmCc-7a-v7ItOQ-hjTBVHotPzHKew==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgXXe2fJclIuesLQONWgYlmx9HpAq8z4xAJxGZCZUCKnECIF1B3slASSbip1bnKQSMDjlmI-NAI_2fe1NZsPIdUyZA"
+    },
+    {
+      "name": "alcatraz_island_penitentiary",
+      "url": "https://rr3---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313209&ei=RUPFasPxCvHYut0Pttra8A0&ip=0.0.0.0&id=721bb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312709,&mh=Vw&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8042905&dur=40.016&lmt=1768289983083272&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAPIr8IAW95FwY9V3HJkeQKfFeN3f6jTa6Nw7R9Jr_ERkAiEA1xg7fDmdAYQDGKIHqGt5f4l7lVMn1a6TWjLi-BwFxLw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhANw09Eu_BR5U5ZCtw-u0joU4TUkVmzK_gSTx9gaOJIkNAiEAj3aPhszfTK8lebkcYUgZDitrhkzBEu2kUMZ_laqNg4A="
+    }
+  ]
+}++ jq -r .slug pending_aerials/sanfrancisco_01.json
++ slug=sanfrancisco_01
+++ jq -r '.aerials | length' pending_aerials/sanfrancisco_01.json
++ n=4
++ mkdir -p sanfrancisco_01/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/sanfrancisco_01.json
++ name=golden_gate_bridge
+++ jq -r '.aerials[0].url' pending_aerials/sanfrancisco_01.json
++ url='https://rr3---sn-ab5l6nrk.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapa4Erbhut0Pi5PksQs&ip=0.0.0.0&id=a639b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=2N&mm=31&mn=sn-ab5l6nrk&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8244301&dur=40.016&lmt=1683869529081840&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPezONIfpPernLixnoW6EVk2THUSEXyp7jp0qNZ37U_aAiBnmqDuojuS1om12KeXXkD5kwlRdu4HDgW2YPupYsFMTQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAOq_p_gBHNZqykb-TfWjPCt4JLrNWDUoRUIRQmGIs-uAAiEAoZffEXGW7sMkRcoWn_1mueP2TuYprz6SHDsbItnyMxA='
++ raw=/tmp/raw_golden_gate_bridge.mp4
++ echo '[golden_gate_bridge] downloading…'
+[golden_gate_bridge] downloading…
++ curl -fsSL -o /tmp/raw_golden_gate_bridge.mp4 'https://rr3---sn-ab5l6nrk.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapa4Erbhut0Pi5PksQs&ip=0.0.0.0&id=a639b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=2N&mm=31&mn=sn-ab5l6nrk&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8244301&dur=40.016&lmt=1683869529081840&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPezONIfpPernLixnoW6EVk2THUSEXyp7jp0qNZ37U_aAiBnmqDuojuS1om12KeXXkD5kwlRdu4HDgW2YPupYsFMTQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAOq_p_gBHNZqykb-TfWjPCt4JLrNWDUoRUIRQmGIs-uAAiEAoZffEXGW7sMkRcoWn_1mueP2TuYprz6SHDsbItnyMxA='
++ rc=0
++ echo '[golden_gate_bridge] curl exit=0'
+[golden_gate_bridge] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_golden_gate_bridge.mp4
+-rw-r--r-- 1 runner runner 8244301 Oct  6 18:53 /tmp/raw_golden_gate_bridge.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/sanfrancisco_01.json
++ name=transamerica_pyramid
+++ jq -r '.aerials[1].url' pending_aerials/sanfrancisco_01.json
++ url='https://rr5---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313208&ei=REPFarGjIZWPxtYP076n-Ao&ip=0.0.0.0&id=a74e250000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=fj&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227447&dur=40.016&lmt=1706576723755506&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMRlCttCDRX9uURpvoTU4uHW0Q7mWceBAtt-XSyLU1wCAiEAvYBCcKYlXgR5hri6BYjFqQCRAH7mFD7Ae7FsytM9KP8=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgVaoNDZScoTqa4F6a-9IAIkraSnK5M1pj7ZtF-iJXpUoCIANgDCugmHTKCbuCmVRhz96CGuEpQNEwf-pCnzCMbf-_'
++ raw=/tmp/raw_transamerica_pyramid.mp4
++ echo '[transamerica_pyramid] downloading…'
+[transamerica_pyramid] downloading…
++ curl -fsSL -o /tmp/raw_transamerica_pyramid.mp4 'https://rr5---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313208&ei=REPFarGjIZWPxtYP076n-Ao&ip=0.0.0.0&id=a74e250000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=fj&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227447&dur=40.016&lmt=1706576723755506&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMRlCttCDRX9uURpvoTU4uHW0Q7mWceBAtt-XSyLU1wCAiEAvYBCcKYlXgR5hri6BYjFqQCRAH7mFD7Ae7FsytM9KP8=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgVaoNDZScoTqa4F6a-9IAIkraSnK5M1pj7ZtF-iJXpUoCIANgDCugmHTKCbuCmVRhz96CGuEpQNEwf-pCnzCMbf-_'
++ rc=0
++ echo '[transamerica_pyramid] curl exit=0'
+[transamerica_pyramid] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_transamerica_pyramid.mp4
+-rw-r--r-- 1 runner runner 8227447 Oct  6 18:53 /tmp/raw_transamerica_pyramid.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/sanfrancisco_01.json
++ name=coit_tower
+++ jq -r '.aerials[2].url' pending_aerials/sanfrancisco_01.json
++ url='https://rr5---sn-ab5l6nk6.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapXtHeiukNQPtOHMoA4&ip=0.0.0.0&id=90f6b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=Jg&mm=31&mn=sn-ab5l6nk6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8240486&dur=40.016&lmt=1683869808351257&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPY6cI4BfBxXnfGGdAmpIueVET86QctQ5Xxyv0dtzimKAiBO3PF9E4RkBOQYlWmCc-7a-v7ItOQ-hjTBVHotPzHKew==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgXXe2fJclIuesLQONWgYlmx9HpAq8z4xAJxGZCZUCKnECIF1B3slASSbip1bnKQSMDjlmI-NAI_2fe1NZsPIdUyZA'
++ raw=/tmp/raw_coit_tower.mp4
++ echo '[coit_tower] downloading…'
+[coit_tower] downloading…
++ curl -fsSL -o /tmp/raw_coit_tower.mp4 'https://rr5---sn-ab5l6nk6.googlevideo.com/videoplayback?expire=1791313208&ei=REPFapXtHeiukNQPtOHMoA4&ip=0.0.0.0&id=90f6b80000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312708,&mh=Jg&mm=31&mn=sn-ab5l6nk6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8240486&dur=40.016&lmt=1683869808351257&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPY6cI4BfBxXnfGGdAmpIueVET86QctQ5Xxyv0dtzimKAiBO3PF9E4RkBOQYlWmCc-7a-v7ItOQ-hjTBVHotPzHKew==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgXXe2fJclIuesLQONWgYlmx9HpAq8z4xAJxGZCZUCKnECIF1B3slASSbip1bnKQSMDjlmI-NAI_2fe1NZsPIdUyZA'
++ rc=0
++ echo '[coit_tower] curl exit=0'
+[coit_tower] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_coit_tower.mp4
+-rw-r--r-- 1 runner runner 8240486 Oct  6 18:54 /tmp/raw_coit_tower.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/sanfrancisco_01.json
++ name=alcatraz_island_penitentiary
+++ jq -r '.aerials[3].url' pending_aerials/sanfrancisco_01.json
++ url='https://rr3---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313209&ei=RUPFasPxCvHYut0Pttra8A0&ip=0.0.0.0&id=721bb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312709,&mh=Vw&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8042905&dur=40.016&lmt=1768289983083272&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAPIr8IAW95FwY9V3HJkeQKfFeN3f6jTa6Nw7R9Jr_ERkAiEA1xg7fDmdAYQDGKIHqGt5f4l7lVMn1a6TWjLi-BwFxLw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhANw09Eu_BR5U5ZCtw-u0joU4TUkVmzK_gSTx9gaOJIkNAiEAj3aPhszfTK8lebkcYUgZDitrhkzBEu2kUMZ_laqNg4A='
++ raw=/tmp/raw_alcatraz_island_penitentiary.mp4
++ echo '[alcatraz_island_penitentiary] downloading…'
+[alcatraz_island_penitentiary] downloading…
++ curl -fsSL -o /tmp/raw_alcatraz_island_penitentiary.mp4 'https://rr3---sn-ab5l6nrl.googlevideo.com/videoplayback?expire=1791313209&ei=RUPFasPxCvHYut0Pttra8A0&ip=0.0.0.0&id=721bb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791312709,&mh=Vw&mm=31&mn=sn-ab5l6nrl&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8042905&dur=40.016&lmt=1768289983083272&mt=1791312326&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAPIr8IAW95FwY9V3HJkeQKfFeN3f6jTa6Nw7R9Jr_ERkAiEA1xg7fDmdAYQDGKIHqGt5f4l7lVMn1a6TWjLi-BwFxLw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhANw09Eu_BR5U5ZCtw-u0joU4TUkVmzK_gSTx9gaOJIkNAiEAj3aPhszfTK8lebkcYUgZDitrhkzBEu2kUMZ_laqNg4A='
++ rc=0
++ echo '[alcatraz_island_penitentiary] curl exit=0'
+[alcatraz_island_penitentiary] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_alcatraz_island_penitentiary.mp4
+-rw-r--r-- 1 runner runner 8042905 Oct  6 18:54 /tmp/raw_alcatraz_island_penitentiary.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/sanfrancisco_01.json
++ name=golden_gate_bridge
++ raw=/tmp/raw_golden_gate_bridge.mp4
++ out=sanfrancisco_01/aerials/golden_gate_bridge.mp4
++ echo '[golden_gate_bridge] transcoding → sanfrancisco_01/aerials/golden_gate_bridge.mp4'
+[golden_gate_bridge] transcoding → sanfrancisco_01/aerials/golden_gate_bridge.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_golden_gate_bridge.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart sanfrancisco_01/aerials/golden_gate_bridge.mp4
++ rc=0
++ echo '[golden_gate_bridge] ffmpeg exit=0'
+[golden_gate_bridge] ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/sanfrancisco_01.json
++ name=transamerica_pyramid
++ raw=/tmp/raw_transamerica_pyramid.mp4
++ out=sanfrancisco_01/aerials/transamerica_pyramid.mp4
++ echo '[transamerica_pyramid] transcoding → sanfrancisco_01/aerials/transamerica_pyramid.mp4'
+[transamerica_pyramid] transcoding → sanfrancisco_01/aerials/transamerica_pyramid.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_transamerica_pyramid.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart sanfrancisco_01/aerials/transamerica_pyramid.mp4
++ rc=0
++ echo '[transamerica_pyramid] ffmpeg exit=0'
+[transamerica_pyramid] ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/sanfrancisco_01.json
++ name=coit_tower
++ raw=/tmp/raw_coit_tower.mp4
++ out=sanfrancisco_01/aerials/coit_tower.mp4
++ echo '[coit_tower] transcoding → sanfrancisco_01/aerials/coit_tower.mp4'
+[coit_tower] transcoding → sanfrancisco_01/aerials/coit_tower.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_coit_tower.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart sanfrancisco_01/aerials/coit_tower.mp4
++ rc=0
++ echo '[coit_tower] ffmpeg exit=0'
+[coit_tower] ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/sanfrancisco_01.json
++ name=alcatraz_island_penitentiary
++ raw=/tmp/raw_alcatraz_island_penitentiary.mp4
++ out=sanfrancisco_01/aerials/alcatraz_island_penitentiary.mp4
++ echo '[alcatraz_island_penitentiary] transcoding → sanfrancisco_01/aerials/alcatraz_island_penitentiary.mp4'
+[alcatraz_island_penitentiary] transcoding → sanfrancisco_01/aerials/alcatraz_island_penitentiary.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_alcatraz_island_penitentiary.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart sanfrancisco_01/aerials/alcatraz_island_penitentiary.mp4
++ rc=0
++ echo '[alcatraz_island_penitentiary] ffmpeg exit=0'
+[alcatraz_island_penitentiary] ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la sanfrancisco_01/aerials
+total 194204
+drwxr-xr-x 2 runner runner     4096 Oct  6 18:56 .
+drwxr-xr-x 4 runner runner     4096 Oct  6 18:52 ..
+-rw-r--r-- 1 runner runner 35458165 Oct  6 18:57 alcatraz_island_penitentiary.mp4
+-rw-r--r-- 1 runner runner 53674508 Oct  6 18:56 coit_tower.mp4
+-rw-r--r-- 1 runner runner 46912069 Oct  6 18:55 golden_gate_bridge.mp4
+-rw-r--r-- 1 runner runner 62802577 Oct  6 18:55 transamerica_pyramid.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/sanfrancisco_01.json
+rm 'pending_aerials/sanfrancisco_01.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
