@@ -1,9 +1,6 @@
 {
   "slug": "test_dummy",
   "aerials": [
-    {"name": "a", "url": "https://download.samplelib.com/mp4/sample-5s.mp4"},
-    {"name": "b", "url": "https://download.samplelib.com/mp4/sample-5s.mp4"},
-    {"name": "c", "url": "https://download.samplelib.com/mp4/sample-5s.mp4"},
-    {"name": "d", "url": "https://download.samplelib.com/mp4/sample-5s.mp4"}
+    {"name": "a", "url": "https://download.samplelib.com/mp4/sample-5s.mp4"}
   ]
 }
