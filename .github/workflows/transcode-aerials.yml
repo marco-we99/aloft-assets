@@ -1,38 +1,20 @@
 name: Transcode Aerials
 
-# Called by the ALOFT pipeline (video_agent/aloft_pipeline.py) via
-# workflow_dispatch when a city reel is ready to compose. The pipeline
-# container cannot reach googlevideo.com (egress policy), so this
-# action does the fetch + ffmpeg transcode on GitHub infrastructure
-# instead, drops the resulting standard-H.264 1080x1920 MP4s into the
-# repo, and the pipeline then feeds the raw.githubusercontent.com URLs
-# to Everygen's compose_video (which chokes on raw Google Aerial
-# DASH-fragmented MP4s but handles plain H.264 fine).
+# Triggered by the ALOFT pipeline (video_agent/aloft_pipeline.py)
+# pushing a pending_aerials/<slug>.json manifest. The pipeline
+# container can't reach googlevideo.com and the Claude GitHub App
+# doesn't carry actions:write, so dispatch is done by push: the
+# pipeline writes the manifest + commits + pushes, this workflow
+# fires on the push, downloads each URL on GitHub infrastructure,
+# re-encodes with ffmpeg to standard H.264 1080x1920 MP4 (so
+# Everygen's Remotion compose_video can decode it — raw Google
+# Aerial DASH-fragmented MP4 fails there), drops results into
+# <slug>/aerials/, deletes the manifest, and pushes.
 
 on:
-  workflow_dispatch:
-    inputs:
-      slug:
-        description: 'Reel slug (e.g. sanfrancisco_01)'
-        required: true
-      url_1:
-        description: 'Google Aerial View signed URL — landmark 1'
-        required: true
-      name_1:
-        description: 'Slug for landmark 1 (e.g. golden_gate_bridge)'
-        required: true
-      url_2:
-        required: true
-      name_2:
-        required: true
-      url_3:
-        required: true
-      name_3:
-        required: true
-      url_4:
-        required: true
-      name_4:
-        required: true
+  push:
+    paths:
+      - 'pending_aerials/*.json'
 
 jobs:
   transcode:
@@ -41,60 +23,77 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need previous commit to diff for changed manifests
 
-      - name: Install ffmpeg
-        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Install ffmpeg + jq
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg jq
 
-      - name: Download + transcode (parallel)
+      - name: Find pending manifests
+        id: find
+        run: |
+          # List manifests that this push added or changed.
+          files=$(git diff --name-only HEAD~1 HEAD -- 'pending_aerials/*.json' || true)
+          if [ -z "$files" ]; then
+            echo "No pending manifests touched by this push; nothing to do."
+            echo "do_transcode=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "do_transcode=true" >> "$GITHUB_OUTPUT"
+            echo "manifests<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$files" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Process manifests
+        if: steps.find.outputs.do_transcode == 'true'
         env:
-          SLUG: ${{ inputs.slug }}
-          URL1: ${{ inputs.url_1 }}
-          URL2: ${{ inputs.url_2 }}
-          URL3: ${{ inputs.url_3 }}
-          URL4: ${{ inputs.url_4 }}
-          NAME1: ${{ inputs.name_1 }}
-          NAME2: ${{ inputs.name_2 }}
-          NAME3: ${{ inputs.name_3 }}
-          NAME4: ${{ inputs.name_4 }}
+          MANIFESTS: ${{ steps.find.outputs.manifests }}
         run: |
           set -e
-          mkdir -p "${SLUG}/aerials"
+          while IFS= read -r manifest; do
+            [ -z "$manifest" ] && continue
+            [ ! -f "$manifest" ] && continue
+            echo "=== $manifest ==="
 
-          # Fetch raw bytes and re-encode as plain H.264 1080x1920 MP4
-          # — Remotion Lambda can decode this; it couldn't decode the
-          # DASH-fragmented variant Google serves directly. Scale to
-          # cover the 9:16 frame, pad with black on the sides if the
-          # source is narrower, drop audio (we overlay the narration
-          # at compose time anyway).
-          transcode() {
-            local url="$1"
-            local name="$2"
-            local raw="/tmp/raw_${name}.mp4"
-            local out="${SLUG}/aerials/${name}.mp4"
-            echo "[${name}] downloading…"
-            curl -fsSL -o "$raw" "$url"
-            echo "[${name}] transcoding → $out"
-            ffmpeg -y -nostdin -loglevel error -i "$raw" \
-              -c:v libx264 -preset fast -crf 20 \
-              -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
-              -pix_fmt yuv420p -r 30 -an \
-              -movflags +faststart \
-              "$out"
-            echo "[${name}] done"
-          }
+            slug=$(jq -r '.slug' "$manifest")
+            n=$(jq -r '.aerials | length' "$manifest")
+            mkdir -p "${slug}/aerials"
 
-          transcode "$URL1" "$NAME1" &
-          transcode "$URL2" "$NAME2" &
-          transcode "$URL3" "$NAME3" &
-          transcode "$URL4" "$NAME4" &
-          wait
+            for i in $(seq 0 $((n - 1))); do
+              name=$(jq -r ".aerials[$i].name" "$manifest")
+              url=$(jq -r ".aerials[$i].url" "$manifest")
+              raw="/tmp/raw_${name}.mp4"
+              out="${slug}/aerials/${name}.mp4"
+              echo "[${name}] downloading…"
+              curl -fsSL -o "$raw" "$url" &
+            done
+            wait
+
+            for i in $(seq 0 $((n - 1))); do
+              name=$(jq -r ".aerials[$i].name" "$manifest")
+              raw="/tmp/raw_${name}.mp4"
+              out="${slug}/aerials/${name}.mp4"
+              echo "[${name}] transcoding → $out"
+              ffmpeg -y -nostdin -loglevel error -i "$raw" \
+                -c:v libx264 -preset fast -crf 20 \
+                -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
+                -pix_fmt yuv420p -r 30 -an \
+                -movflags +faststart \
+                "$out" &
+            done
+            wait
+
+            git rm "$manifest"
+          done <<< "$MANIFESTS"
 
       - name: Commit + push
-        env:
-          SLUG: ${{ inputs.slug }}
+        if: steps.find.outputs.do_transcode == 'true'
         run: |
           git config user.email "noreply@anthropic.com"
           git config user.name "ALOFT transcoder"
-          git add "${SLUG}/aerials"
-          git commit -m "aerials: ${SLUG}"
+          git add -A
+          # [skip ci] tag prevents the delete of the pending manifest
+          # from retriggering this same workflow in a loop.
+          git commit -m "aerials: transcoded [skip ci]"
+          git pull --rebase origin main
           git push
