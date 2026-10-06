@@ -51,40 +51,59 @@ jobs:
         env:
           MANIFESTS: ${{ steps.find.outputs.manifests }}
         run: |
-          set -e
+          set -euxo pipefail
+          echo "MANIFESTS payload:"
+          echo "$MANIFESTS"
+          echo "---"
+
           while IFS= read -r manifest; do
             [ -z "$manifest" ] && continue
-            [ ! -f "$manifest" ] && continue
+            if [ ! -f "$manifest" ]; then
+              echo "WARN: $manifest not on disk, skipping"
+              continue
+            fi
             echo "=== $manifest ==="
+            cat "$manifest"
 
             slug=$(jq -r '.slug' "$manifest")
             n=$(jq -r '.aerials | length' "$manifest")
             mkdir -p "${slug}/aerials"
 
+            # Download sequentially — easier to spot a bad URL in logs
+            # and the slow part is ffmpeg anyway.
             for i in $(seq 0 $((n - 1))); do
               name=$(jq -r ".aerials[$i].name" "$manifest")
               url=$(jq -r ".aerials[$i].url" "$manifest")
               raw="/tmp/raw_${name}.mp4"
-              out="${slug}/aerials/${name}.mp4"
               echo "[${name}] downloading…"
-              curl -fsSL -o "$raw" "$url" &
+              curl -fsSL -o "$raw" "$url"
+              ls -la "$raw"
             done
-            wait
 
+            # Transcode in parallel, capture per-clip exit code so a
+            # failure doesn't silently vanish into a background shell.
+            pids=()
             for i in $(seq 0 $((n - 1))); do
               name=$(jq -r ".aerials[$i].name" "$manifest")
               raw="/tmp/raw_${name}.mp4"
               out="${slug}/aerials/${name}.mp4"
               echo "[${name}] transcoding → $out"
-              ffmpeg -y -nostdin -loglevel error -i "$raw" \
-                -c:v libx264 -preset fast -crf 20 \
-                -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
-                -pix_fmt yuv420p -r 30 -an \
-                -movflags +faststart \
-                "$out" &
+              (
+                ffmpeg -y -nostdin -loglevel error -i "$raw" \
+                  -c:v libx264 -preset fast -crf 20 \
+                  -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
+                  -pix_fmt yuv420p -r 30 -an \
+                  -movflags +faststart \
+                  "$out"
+                echo "[${name}] transcoded, $(stat -c%s "$out") bytes"
+              ) &
+              pids+=($!)
             done
-            wait
+            for pid in "${pids[@]}"; do
+              wait "$pid"
+            done
 
+            ls -la "${slug}/aerials"
             git rm "$manifest"
           done <<< "$MANIFESTS"
 
