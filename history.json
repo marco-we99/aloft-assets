@@ -1,0 +1,20 @@
+{
+  "cities": {
+    "SAN FRANCISCO": {
+      "reels": [
+        {
+          "reel_id": "sanfrancisco_01",
+          "created_at": "2026-10-06T19:03:30.555482Z",
+          "landmarks": [
+            "GOLDEN GATE BRIDGE",
+            "TRANSAMERICA PYRAMID",
+            "COIT TOWER",
+            "ALCATRAZ ISLAND PENITENTIARY"
+          ],
+          "composed_url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/eew3uk1mxb/captioned.mp4",
+          "posted": []
+        }
+      ]
+    }
+  }
+}
