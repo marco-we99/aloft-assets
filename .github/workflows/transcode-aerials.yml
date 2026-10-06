@@ -51,11 +51,17 @@ jobs:
         env:
           MANIFESTS: ${{ steps.find.outputs.manifests }}
         run: |
-          set -euxo pipefail
-          echo "MANIFESTS payload:"
-          echo "$MANIFESTS"
+          # Run inside this subshell with everything tee'd into a log
+          # we commit after, so a failure surfaces even without the
+          # ability to pull workflow run logs out of GitHub storage.
+          set +e
+          exec > >(tee -a transcode_debug.log) 2>&1
+          set -xuo pipefail
+
+          echo "MANIFESTS payload: [$MANIFESTS]"
           echo "---"
 
+          overall_rc=0
           while IFS= read -r manifest; do
             [ -z "$manifest" ] && continue
             if [ ! -f "$manifest" ]; then
@@ -63,58 +69,54 @@ jobs:
               continue
             fi
             echo "=== $manifest ==="
-            cat "$manifest"
+            cat "$manifest" || true
 
             slug=$(jq -r '.slug' "$manifest")
             n=$(jq -r '.aerials | length' "$manifest")
             mkdir -p "${slug}/aerials"
 
-            # Download sequentially — easier to spot a bad URL in logs
-            # and the slow part is ffmpeg anyway.
             for i in $(seq 0 $((n - 1))); do
               name=$(jq -r ".aerials[$i].name" "$manifest")
               url=$(jq -r ".aerials[$i].url" "$manifest")
               raw="/tmp/raw_${name}.mp4"
               echo "[${name}] downloading…"
               curl -fsSL -o "$raw" "$url"
+              rc=$?
+              echo "[${name}] curl exit=$rc"
+              [ $rc -ne 0 ] && { overall_rc=$rc; echo "SKIP transcode"; continue; }
               ls -la "$raw"
             done
 
-            # Transcode in parallel, capture per-clip exit code so a
-            # failure doesn't silently vanish into a background shell.
-            pids=()
             for i in $(seq 0 $((n - 1))); do
               name=$(jq -r ".aerials[$i].name" "$manifest")
               raw="/tmp/raw_${name}.mp4"
               out="${slug}/aerials/${name}.mp4"
               echo "[${name}] transcoding → $out"
-              (
-                ffmpeg -y -nostdin -loglevel error -i "$raw" \
-                  -c:v libx264 -preset fast -crf 20 \
-                  -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
-                  -pix_fmt yuv420p -r 30 -an \
-                  -movflags +faststart \
-                  "$out"
-                echo "[${name}] transcoded, $(stat -c%s "$out") bytes"
-              ) &
-              pids+=($!)
-            done
-            for pid in "${pids[@]}"; do
-              wait "$pid"
+              ffmpeg -y -nostdin -loglevel error -i "$raw" \
+                -c:v libx264 -preset fast -crf 20 \
+                -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
+                -pix_fmt yuv420p -r 30 -an \
+                -movflags +faststart \
+                "$out"
+              rc=$?
+              echo "[${name}] ffmpeg exit=$rc"
+              [ $rc -ne 0 ] && overall_rc=$rc
             done
 
             ls -la "${slug}/aerials"
-            git rm "$manifest"
+            [ $overall_rc -eq 0 ] && git rm "$manifest"
           done <<< "$MANIFESTS"
+          echo "overall_rc=$overall_rc"
+          exit $overall_rc
 
-      - name: Commit + push
-        if: steps.find.outputs.do_transcode == 'true'
+      - name: Commit + push (always, so debug log is pushed on failure too)
+        if: always() && steps.find.outputs.do_transcode == 'true'
         run: |
           git config user.email "noreply@anthropic.com"
           git config user.name "ALOFT transcoder"
+          # Keep debug log inside the repo so we can read it afterwards.
           git add -A
-          # [skip ci] tag prevents the delete of the pending manifest
-          # from retriggering this same workflow in a loop.
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
           git commit -m "aerials: transcoded [skip ci]"
           git pull --rebase origin main
           git push
