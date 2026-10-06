@@ -1,0 +1,100 @@
+name: Transcode Aerials
+
+# Called by the ALOFT pipeline (video_agent/aloft_pipeline.py) via
+# workflow_dispatch when a city reel is ready to compose. The pipeline
+# container cannot reach googlevideo.com (egress policy), so this
+# action does the fetch + ffmpeg transcode on GitHub infrastructure
+# instead, drops the resulting standard-H.264 1080x1920 MP4s into the
+# repo, and the pipeline then feeds the raw.githubusercontent.com URLs
+# to Everygen's compose_video (which chokes on raw Google Aerial
+# DASH-fragmented MP4s but handles plain H.264 fine).
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Reel slug (e.g. sanfrancisco_01)'
+        required: true
+      url_1:
+        description: 'Google Aerial View signed URL — landmark 1'
+        required: true
+      name_1:
+        description: 'Slug for landmark 1 (e.g. golden_gate_bridge)'
+        required: true
+      url_2:
+        required: true
+      name_2:
+        required: true
+      url_3:
+        required: true
+      name_3:
+        required: true
+      url_4:
+        required: true
+      name_4:
+        required: true
+
+jobs:
+  transcode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+
+      - name: Download + transcode (parallel)
+        env:
+          SLUG: ${{ inputs.slug }}
+          URL1: ${{ inputs.url_1 }}
+          URL2: ${{ inputs.url_2 }}
+          URL3: ${{ inputs.url_3 }}
+          URL4: ${{ inputs.url_4 }}
+          NAME1: ${{ inputs.name_1 }}
+          NAME2: ${{ inputs.name_2 }}
+          NAME3: ${{ inputs.name_3 }}
+          NAME4: ${{ inputs.name_4 }}
+        run: |
+          set -e
+          mkdir -p "${SLUG}/aerials"
+
+          # Fetch raw bytes and re-encode as plain H.264 1080x1920 MP4
+          # — Remotion Lambda can decode this; it couldn't decode the
+          # DASH-fragmented variant Google serves directly. Scale to
+          # cover the 9:16 frame, pad with black on the sides if the
+          # source is narrower, drop audio (we overlay the narration
+          # at compose time anyway).
+          transcode() {
+            local url="$1"
+            local name="$2"
+            local raw="/tmp/raw_${name}.mp4"
+            local out="${SLUG}/aerials/${name}.mp4"
+            echo "[${name}] downloading…"
+            curl -fsSL -o "$raw" "$url"
+            echo "[${name}] transcoding → $out"
+            ffmpeg -y -nostdin -loglevel error -i "$raw" \
+              -c:v libx264 -preset fast -crf 20 \
+              -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
+              -pix_fmt yuv420p -r 30 -an \
+              -movflags +faststart \
+              "$out"
+            echo "[${name}] done"
+          }
+
+          transcode "$URL1" "$NAME1" &
+          transcode "$URL2" "$NAME2" &
+          transcode "$URL3" "$NAME3" &
+          transcode "$URL4" "$NAME4" &
+          wait
+
+      - name: Commit + push
+        env:
+          SLUG: ${{ inputs.slug }}
+        run: |
+          git config user.email "noreply@anthropic.com"
+          git config user.name "ALOFT transcoder"
+          git add "${SLUG}/aerials"
+          git commit -m "aerials: ${SLUG}"
+          git push
