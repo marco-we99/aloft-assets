@@ -92,7 +92,8 @@ jobs:
               name=$(jq -r ".aerials[$i].name" "$manifest")
               raw="/tmp/raw_${name}.mp4"
               out="${slug}/aerials/${name}.mp4"
-              echo "[${name}] transcoding → $out"
+              ref="${slug}/aerials/${name}_v2v_ref.mp4"
+              echo "[${name}] transcoding full → $out"
               ffmpeg -y -nostdin -loglevel error -i "$raw" \
                 -c:v libx264 -preset fast -crf 20 \
                 -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
@@ -100,7 +101,23 @@ jobs:
                 -movflags +faststart \
                 "$out"
               rc=$?
-              echo "[${name}] ffmpeg exit=$rc"
+              echo "[${name}] full ffmpeg exit=$rc"
+              [ $rc -ne 0 ] && overall_rc=$rc
+
+              # Also emit an 8-second trim of the middle of the clip
+              # (Google aerials start with a static establishing shot,
+              # motion picks up around t=4s). This is the reference
+              # Minimax H3 uses to preserve camera motion when
+              # regenerating the clip in cinematic golden-hour look.
+              echo "[${name}] trimming v2v reference → $ref"
+              ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i "$raw" \
+                -c:v libx264 -preset fast -crf 20 \
+                -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1" \
+                -pix_fmt yuv420p -r 30 -an \
+                -movflags +faststart \
+                "$ref"
+              rc=$?
+              echo "[${name}] trim ffmpeg exit=$rc"
               [ $rc -ne 0 ] && overall_rc=$rc
             done
 
