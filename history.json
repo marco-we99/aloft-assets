@@ -15,6 +15,22 @@
           "posted": []
         }
       ]
+    },
+    "LAS VEGAS": {
+      "reels": [
+        {
+          "reel_id": "lasvegas_01",
+          "created_at": "2026-10-13T14:11:33.903500Z",
+          "landmarks": [
+            "STRATOSPHERE TOWER",
+            "BELLAGIO FOUNTAINS",
+            "HOOVER DAM",
+            "LUXOR PYRAMID"
+          ],
+          "composed_url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/jdp595ashh/captioned.mp4",
+          "posted": []
+        }
+      ]
     }
   }
 }
