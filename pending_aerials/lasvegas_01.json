@@ -1,0 +1,25 @@
+{
+  "slug": "lasvegas_01",
+  "aerials": [
+    {
+      "name": "stratosphere_tower",
+      "url": "https://rr3---sn-p5qs7n6d.googlevideo.com/videoplayback?expire=1791889809&ei=nQ_Oav2TBPvBy_sPpPjS8Q4&ip=0.0.0.0&id=f1ff250000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791889309,&mh=39&mm=31&mn=sn-p5qs7n6d&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8236105&dur=40.016&lmt=1710467538541717&mt=1791888679&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgDj1FoJqV7K1IfAdVrltApe4Mdz3g4N9xmXpt3chZbX0CIQDEwDOeIeJ3GJgKG4VJRBXFmtOoh8qiEedysX8-leeADg==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgHrd-JEXOzbgazZvZhv0-2BSmT2d_ukLvMyYUcwMLQvwCIQDsQlae-IVqCXm3iyt3WTFiohUh9Od-1034zoYgGE2Jqg=="
+    },
+    {
+      "name": "bellagio_fountains",
+      "url": "https://rr1---sn-2op5q5-58.googlevideo.com/videoplayback?expire=1791889809&ei=nQ_OarOvAfToy_sPnuvQ4AY&ip=0.0.0.0&id=8488990000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791889309,&mh=xL&mm=31&mn=sn-2op5q5-58&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8224818&dur=40.016&lmt=1701213107120784&mt=1791888679&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgVTV4zLBuQxdUTD2b2-2mY2uA9vyM3a5Rm3YXXcjlI2sCIHP4JRNhaSz0EV2ZTK7g6frPqRDTNmfCpINFvehk_32d&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJIZUbxPgqEVJiPUn0X3jQyx1jXsJ-ilChtbKK68YUiZAiEAmaIMskFJxMwAWSXxzCeYWPnJaCURMIo9uVy8Bjwzhz0="
+    },
+    {
+      "name": "hoover_dam",
+      "url": "https://rr2---sn-2op5q5-5u.googlevideo.com/videoplayback?expire=1791889809&ei=nQ_OarGGLsf7y_sPzdf-6A8&ip=0.0.0.0&id=0f491b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=125&met=1791889309,&mh=97&mm=31&mn=sn-2op5q5-5u&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8258403&dur=40.016&lmt=1779939641681940&mt=1791888662&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhANVWrfsXVn3J4pW4jBp-6obhvekrbKu9eAzM7ePzfTLRAiEAqnJeuaQ9ceIqFGcog_2fHbfNBRsxIAOIi8J3-K7GrGQ=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJenEf1H8DIY-Fm1j3ls7mEuvmiJikmyCMXkTJ0IWaV7AiBcxIPS9okBUcBOZFfxOdXNK3QsXCg6W8k8bb0y6BJ4_Q=="
+    },
+    {
+      "name": "luxor_pyramid",
+      "url": "https://rr2---sn-p5qlsn6s.googlevideo.com/videoplayback?expire=1791889808&ei=nA_OaoOkKd7mxOEPmbGtGA&ip=0.0.0.0&id=75f40a0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=118&met=1791889308,&mh=z8&mm=31&mn=sn-p5qlsn6s&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227538&dur=40.016&lmt=1685083703158634&mt=1791888679&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAP9VsEFewLHA1tJW9mHVYRb5ar7kapjayuBtobeTAa2LAiApZWEV5foARLJ57kddNOOnoljwlKgdKtv9lf_nGI8cQg==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhANM3mP6AgrAgtAhc3iIUAAzjtThl3TBd02k798WUsiMlAiBR0X2YB34XwdBjH0ZnXLZh4_-Ba3PEDYevRSfNpRZz-g=="
+    },
+    {
+      "name": "caesars_palace",
+      "url": "https://rr2---sn-p5qs7n6y.googlevideo.com/videoplayback?expire=1791889809&ei=nQ_OarfVA7a-y_sPs661oQs&ip=0.0.0.0&id=18e8590000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791889309,&mh=vk&mm=31&mn=sn-p5qs7n6y&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230863&dur=40.016&lmt=1701241419613576&mt=1791888679&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAPzPVJgeB3srQin-KO-NAf4qN1pBZ11oX25v9oOyE3TKAiAgrIfYGNi1EyElOaPeC0cqcU7FFYoN5M9Mjsi7XjJNAA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgLlIixDU2MK1EAyFZExJIBx5pfsMTogNV38dnjMVh8bgCIFl61eqf187XAprR2L_9GT4CNEvPIoQsQiFB39Vi1Pro"
+    }
+  ]
+}
