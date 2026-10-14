@@ -1,0 +1,9 @@
+{
+  "slug": "losangeles_cityaerial",
+  "aerials": [
+    {
+      "name": "city",
+      "url": "https://rr5---sn-p5qddn7z.googlevideo.com/videoplayback?expire=1792006142&ei=CtbPatywM9iskNQPqYyciAQ&ip=0.0.0.0&id=e67b3b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792005642,&mh=uZ&mm=31&mn=sn-p5qddn7z&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&rqh=1&gir=yes&clen=8229231&dur=40.016&lmt=1787684038189945&mt=1792005024&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgI78-p7-tBH-O8B0uUl1u-AZfUN_anZYFD6OnkwYcP4QCIQDWfqwRcafw7pGDFc_evYrZnkdoDFXSWIUMICnBuRt_vQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAIU1-s7E7igjAirpZrU06ciWmPZmb50O7KGxEg7YVcabAiEA0Rh0Jd8aa_xz0tFpJO36qOe3C_c2YH4brBD0a4G_WVI="
+    }
+  ]
+}
