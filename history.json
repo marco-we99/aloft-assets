@@ -72,7 +72,13 @@
             "NAVY PIER"
           ],
           "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/gjjxzbiz6f/out.mp4",
-          "posted": []
+          "posted": [
+            {
+              "platform": "tiktok",
+              "url": "https://vm.tiktok.com/ZN8SRYFLG/",
+              "posted_at": "2026-10-14T13:51:59.498854Z"
+            }
+          ]
         }
       ]
     }
