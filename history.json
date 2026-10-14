@@ -97,6 +97,22 @@
           "posted": []
         }
       ]
+    },
+    "MIAMI": {
+      "reels": [
+        {
+          "reel_id": "miami_01",
+          "created_at": "2026-10-14T18:24:54.528163Z",
+          "landmarks": [
+            "COCONUT GROVE",
+            "VIZCAYA MUSEUM",
+            "PEREZ ART MUSEUM",
+            "BAYSIDE MARKETPLACE"
+          ],
+          "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/rcix2opni9/out.mp4",
+          "posted": []
+        }
+      ]
     }
   }
 }
