@@ -1425,3 +1425,202 @@ rm 'pending_aerials/losangeles_cityaerial.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/losangeles.json]'
+MANIFESTS payload: [pending_aerials/losangeles.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/losangeles.json ']'
++ '[' '!' -f pending_aerials/losangeles.json ']'
++ echo '=== pending_aerials/losangeles.json ==='
+=== pending_aerials/losangeles.json ===
++ cat pending_aerials/losangeles.json
+{
+  "slug": "losangeles",
+  "aerials": [
+    {
+      "name": "hollywood_sign",
+      "url": "https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792006566&ei=stfPavmpE_HYut0P75r2uA4&ip=0.0.0.0&id=f0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=wM&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8253229&dur=40.016&lmt=1791048174573749&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ8Z18_Z8g4UY1XYZUDrDoAZjDH_GK9ehRfNLSzLBi7tAiEAq6bQtnSgzaI39h6pwLoajKIlxjSkBg4N78FQqeD7cJc=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAKegGW3qDkasJNOuUllnqz0lpfE8_dy8PZpBqMhycjmKAiAoFP6gNYcpBd8brbMOLLYltG74t8u27WMTmoMUSiQAAQ=="
+    },
+    {
+      "name": "griffith_observatory",
+      "url": "https://rr5---sn-p5qs7nzy.googlevideo.com/videoplayback?expire=1792006566&ei=stfPatLwOubhkucPvrSy4AU&ip=0.0.0.0&id=d76dc50000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=tU&mm=31&mn=sn-p5qs7nzy&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232302&dur=40.016&lmt=1701710539183509&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAOs2qIi40woJd-R6fDryQIJovXRGsl1U_RBTBYvFnJVIAiEAxtSQW8TRKZfJAKBzQ8bzx_BcVA9PzoHSVCm4Wc3lwsw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgUHENOtLL3z1xRCzYp8iVwgLEvY2tSk-8SoEjlL044UcCIQC123hW_P8J_tDkxrw8xLYBL3jaCNIvladxkN48xIQXEg=="
+    },
+    {
+      "name": "getty_center",
+      "url": "https://rr5---sn-p5qddn7k.googlevideo.com/videoplayback?expire=1792006567&ei=s9fPapjGIIDhut0PuM-uyA4&ip=0.0.0.0&id=fd86da0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006067,&mh=wk&mm=31&mn=sn-p5qddn7k&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230553&dur=40.016&lmt=1685202293349964&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgOJVaiDQFG7TaCFZRHUcz2KTgqj2YODOWUCOK-W_r7gUCIHm3We71jZZTTQ4bH0onlJ427W1qulxqoJ4shOXBCaeC&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJcQ0LukLkkMuedYfcK1s4r-JWlJgDC6lxcoIpZyI13YAiAXdFSmZMezscS7UeSQZL8L64Fa9KsoA7clxxnXhq873w=="
+    },
+    {
+      "name": "walt_disney_concert_hall",
+      "url": "https://rr5---sn-2op5q5-5u.googlevideo.com/videoplayback?expire=1792006568&ei=tNfPaoT7COjhut0PpardkQ0&ip=0.0.0.0&id=2df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006068,&mh=B2&mm=31&mn=sn-2op5q5-5u&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8223759&dur=40.016&lmt=1778454001259393&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgSxxe1m_2lTrGWQyLEeGi41e6TAJk3JQcOFIN92zd27ACIEPLhaUnOzmN6d0ftuUKxpFvibVoo2x72yA4CErxJG8C&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAO3JMdru9JXK-Ko0OF7e8E-_92aRsq9mzEzPp1pee99pAiAmNBYJ1CtVuyM6Z42eP3ba4jjW5z2YJ1CwiKUtCC2jIw=="
+    }
+  ]
+}++ jq -r .slug pending_aerials/losangeles.json
++ slug=losangeles
+++ jq -r '.aerials | length' pending_aerials/losangeles.json
++ n=4
++ mkdir -p losangeles/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/losangeles.json
++ name=hollywood_sign
+++ jq -r '.aerials[0].url' pending_aerials/losangeles.json
++ url='https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792006566&ei=stfPavmpE_HYut0P75r2uA4&ip=0.0.0.0&id=f0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=wM&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8253229&dur=40.016&lmt=1791048174573749&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ8Z18_Z8g4UY1XYZUDrDoAZjDH_GK9ehRfNLSzLBi7tAiEAq6bQtnSgzaI39h6pwLoajKIlxjSkBg4N78FQqeD7cJc=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAKegGW3qDkasJNOuUllnqz0lpfE8_dy8PZpBqMhycjmKAiAoFP6gNYcpBd8brbMOLLYltG74t8u27WMTmoMUSiQAAQ=='
++ raw=/tmp/raw_hollywood_sign.mp4
++ echo '[hollywood_sign] downloading…'
+[hollywood_sign] downloading…
++ curl -fsSL -o /tmp/raw_hollywood_sign.mp4 'https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792006566&ei=stfPavmpE_HYut0P75r2uA4&ip=0.0.0.0&id=f0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=wM&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8253229&dur=40.016&lmt=1791048174573749&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ8Z18_Z8g4UY1XYZUDrDoAZjDH_GK9ehRfNLSzLBi7tAiEAq6bQtnSgzaI39h6pwLoajKIlxjSkBg4N78FQqeD7cJc=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAKegGW3qDkasJNOuUllnqz0lpfE8_dy8PZpBqMhycjmKAiAoFP6gNYcpBd8brbMOLLYltG74t8u27WMTmoMUSiQAAQ=='
++ rc=0
++ echo '[hollywood_sign] curl exit=0'
+[hollywood_sign] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_hollywood_sign.mp4
+-rw-r--r-- 1 runner runner 8253229 Oct 14 19:29 /tmp/raw_hollywood_sign.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/losangeles.json
++ name=griffith_observatory
+++ jq -r '.aerials[1].url' pending_aerials/losangeles.json
++ url='https://rr5---sn-p5qs7nzy.googlevideo.com/videoplayback?expire=1792006566&ei=stfPatLwOubhkucPvrSy4AU&ip=0.0.0.0&id=d76dc50000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=tU&mm=31&mn=sn-p5qs7nzy&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232302&dur=40.016&lmt=1701710539183509&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAOs2qIi40woJd-R6fDryQIJovXRGsl1U_RBTBYvFnJVIAiEAxtSQW8TRKZfJAKBzQ8bzx_BcVA9PzoHSVCm4Wc3lwsw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgUHENOtLL3z1xRCzYp8iVwgLEvY2tSk-8SoEjlL044UcCIQC123hW_P8J_tDkxrw8xLYBL3jaCNIvladxkN48xIQXEg=='
++ raw=/tmp/raw_griffith_observatory.mp4
++ echo '[griffith_observatory] downloading…'
+[griffith_observatory] downloading…
++ curl -fsSL -o /tmp/raw_griffith_observatory.mp4 'https://rr5---sn-p5qs7nzy.googlevideo.com/videoplayback?expire=1792006566&ei=stfPatLwOubhkucPvrSy4AU&ip=0.0.0.0&id=d76dc50000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006066,&mh=tU&mm=31&mn=sn-p5qs7nzy&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232302&dur=40.016&lmt=1701710539183509&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAOs2qIi40woJd-R6fDryQIJovXRGsl1U_RBTBYvFnJVIAiEAxtSQW8TRKZfJAKBzQ8bzx_BcVA9PzoHSVCm4Wc3lwsw=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgUHENOtLL3z1xRCzYp8iVwgLEvY2tSk-8SoEjlL044UcCIQC123hW_P8J_tDkxrw8xLYBL3jaCNIvladxkN48xIQXEg=='
++ rc=0
++ echo '[griffith_observatory] curl exit=0'
+[griffith_observatory] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_griffith_observatory.mp4
+-rw-r--r-- 1 runner runner 8232302 Oct 14 19:29 /tmp/raw_griffith_observatory.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/losangeles.json
++ name=getty_center
+++ jq -r '.aerials[2].url' pending_aerials/losangeles.json
++ url='https://rr5---sn-p5qddn7k.googlevideo.com/videoplayback?expire=1792006567&ei=s9fPapjGIIDhut0PuM-uyA4&ip=0.0.0.0&id=fd86da0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006067,&mh=wk&mm=31&mn=sn-p5qddn7k&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230553&dur=40.016&lmt=1685202293349964&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgOJVaiDQFG7TaCFZRHUcz2KTgqj2YODOWUCOK-W_r7gUCIHm3We71jZZTTQ4bH0onlJ427W1qulxqoJ4shOXBCaeC&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJcQ0LukLkkMuedYfcK1s4r-JWlJgDC6lxcoIpZyI13YAiAXdFSmZMezscS7UeSQZL8L64Fa9KsoA7clxxnXhq873w=='
++ raw=/tmp/raw_getty_center.mp4
++ echo '[getty_center] downloading…'
+[getty_center] downloading…
++ curl -fsSL -o /tmp/raw_getty_center.mp4 'https://rr5---sn-p5qddn7k.googlevideo.com/videoplayback?expire=1792006567&ei=s9fPapjGIIDhut0PuM-uyA4&ip=0.0.0.0&id=fd86da0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006067,&mh=wk&mm=31&mn=sn-p5qddn7k&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230553&dur=40.016&lmt=1685202293349964&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgOJVaiDQFG7TaCFZRHUcz2KTgqj2YODOWUCOK-W_r7gUCIHm3We71jZZTTQ4bH0onlJ427W1qulxqoJ4shOXBCaeC&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJcQ0LukLkkMuedYfcK1s4r-JWlJgDC6lxcoIpZyI13YAiAXdFSmZMezscS7UeSQZL8L64Fa9KsoA7clxxnXhq873w=='
++ rc=0
++ echo '[getty_center] curl exit=0'
+[getty_center] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_getty_center.mp4
+-rw-r--r-- 1 runner runner 8230553 Oct 14 19:29 /tmp/raw_getty_center.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/losangeles.json
++ name=walt_disney_concert_hall
+++ jq -r '.aerials[3].url' pending_aerials/losangeles.json
++ url='https://rr5---sn-2op5q5-5u.googlevideo.com/videoplayback?expire=1792006568&ei=tNfPaoT7COjhut0PpardkQ0&ip=0.0.0.0&id=2df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006068,&mh=B2&mm=31&mn=sn-2op5q5-5u&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8223759&dur=40.016&lmt=1778454001259393&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgSxxe1m_2lTrGWQyLEeGi41e6TAJk3JQcOFIN92zd27ACIEPLhaUnOzmN6d0ftuUKxpFvibVoo2x72yA4CErxJG8C&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAO3JMdru9JXK-Ko0OF7e8E-_92aRsq9mzEzPp1pee99pAiAmNBYJ1CtVuyM6Z42eP3ba4jjW5z2YJ1CwiKUtCC2jIw=='
++ raw=/tmp/raw_walt_disney_concert_hall.mp4
++ echo '[walt_disney_concert_hall] downloading…'
+[walt_disney_concert_hall] downloading…
++ curl -fsSL -o /tmp/raw_walt_disney_concert_hall.mp4 'https://rr5---sn-2op5q5-5u.googlevideo.com/videoplayback?expire=1792006568&ei=tNfPaoT7COjhut0PpardkQ0&ip=0.0.0.0&id=2df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792006068,&mh=B2&mm=31&mn=sn-2op5q5-5u&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8223759&dur=40.016&lmt=1778454001259393&mt=1792005756&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgSxxe1m_2lTrGWQyLEeGi41e6TAJk3JQcOFIN92zd27ACIEPLhaUnOzmN6d0ftuUKxpFvibVoo2x72yA4CErxJG8C&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAO3JMdru9JXK-Ko0OF7e8E-_92aRsq9mzEzPp1pee99pAiAmNBYJ1CtVuyM6Z42eP3ba4jjW5z2YJ1CwiKUtCC2jIw=='
++ rc=0
++ echo '[walt_disney_concert_hall] curl exit=0'
+[walt_disney_concert_hall] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_walt_disney_concert_hall.mp4
+-rw-r--r-- 1 runner runner 8223759 Oct 14 19:30 /tmp/raw_walt_disney_concert_hall.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/losangeles.json
++ name=hollywood_sign
++ raw=/tmp/raw_hollywood_sign.mp4
++ out=losangeles/aerials/hollywood_sign.mp4
++ ref=losangeles/aerials/hollywood_sign_v2v_ref.mp4
++ echo '[hollywood_sign] transcoding full → losangeles/aerials/hollywood_sign.mp4'
+[hollywood_sign] transcoding full → losangeles/aerials/hollywood_sign.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_hollywood_sign.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/hollywood_sign.mp4
++ rc=0
++ echo '[hollywood_sign] full ffmpeg exit=0'
+[hollywood_sign] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[hollywood_sign] trimming v2v reference → losangeles/aerials/hollywood_sign_v2v_ref.mp4'
+[hollywood_sign] trimming v2v reference → losangeles/aerials/hollywood_sign_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_hollywood_sign.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/hollywood_sign_v2v_ref.mp4
++ rc=0
++ echo '[hollywood_sign] trim ffmpeg exit=0'
+[hollywood_sign] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/losangeles.json
++ name=griffith_observatory
++ raw=/tmp/raw_griffith_observatory.mp4
++ out=losangeles/aerials/griffith_observatory.mp4
++ ref=losangeles/aerials/griffith_observatory_v2v_ref.mp4
++ echo '[griffith_observatory] transcoding full → losangeles/aerials/griffith_observatory.mp4'
+[griffith_observatory] transcoding full → losangeles/aerials/griffith_observatory.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_griffith_observatory.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/griffith_observatory.mp4
++ rc=0
++ echo '[griffith_observatory] full ffmpeg exit=0'
+[griffith_observatory] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[griffith_observatory] trimming v2v reference → losangeles/aerials/griffith_observatory_v2v_ref.mp4'
+[griffith_observatory] trimming v2v reference → losangeles/aerials/griffith_observatory_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_griffith_observatory.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/griffith_observatory_v2v_ref.mp4
++ rc=0
++ echo '[griffith_observatory] trim ffmpeg exit=0'
+[griffith_observatory] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/losangeles.json
++ name=getty_center
++ raw=/tmp/raw_getty_center.mp4
++ out=losangeles/aerials/getty_center.mp4
++ ref=losangeles/aerials/getty_center_v2v_ref.mp4
++ echo '[getty_center] transcoding full → losangeles/aerials/getty_center.mp4'
+[getty_center] transcoding full → losangeles/aerials/getty_center.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_getty_center.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/getty_center.mp4
++ rc=0
++ echo '[getty_center] full ffmpeg exit=0'
+[getty_center] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[getty_center] trimming v2v reference → losangeles/aerials/getty_center_v2v_ref.mp4'
+[getty_center] trimming v2v reference → losangeles/aerials/getty_center_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_getty_center.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/getty_center_v2v_ref.mp4
++ rc=0
++ echo '[getty_center] trim ffmpeg exit=0'
+[getty_center] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/losangeles.json
++ name=walt_disney_concert_hall
++ raw=/tmp/raw_walt_disney_concert_hall.mp4
++ out=losangeles/aerials/walt_disney_concert_hall.mp4
++ ref=losangeles/aerials/walt_disney_concert_hall_v2v_ref.mp4
++ echo '[walt_disney_concert_hall] transcoding full → losangeles/aerials/walt_disney_concert_hall.mp4'
+[walt_disney_concert_hall] transcoding full → losangeles/aerials/walt_disney_concert_hall.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_walt_disney_concert_hall.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/walt_disney_concert_hall.mp4
++ rc=0
++ echo '[walt_disney_concert_hall] full ffmpeg exit=0'
+[walt_disney_concert_hall] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[walt_disney_concert_hall] trimming v2v reference → losangeles/aerials/walt_disney_concert_hall_v2v_ref.mp4'
+[walt_disney_concert_hall] trimming v2v reference → losangeles/aerials/walt_disney_concert_hall_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_walt_disney_concert_hall.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart losangeles/aerials/walt_disney_concert_hall_v2v_ref.mp4
++ rc=0
++ echo '[walt_disney_concert_hall] trim ffmpeg exit=0'
+[walt_disney_concert_hall] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la losangeles/aerials
+total 278076
+drwxr-xr-x 2 runner runner     4096 Oct 14 19:32 .
+drwxr-xr-x 3 runner runner     4096 Oct 14 19:28 ..
+-rw-r--r-- 1 runner runner 61900486 Oct 14 19:32 getty_center.mp4
+-rw-r--r-- 1 runner runner 13661415 Oct 14 19:32 getty_center_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 62165922 Oct 14 19:31 griffith_observatory.mp4
+-rw-r--r-- 1 runner runner 11981022 Oct 14 19:31 griffith_observatory_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 47864673 Oct 14 19:30 hollywood_sign.mp4
+-rw-r--r-- 1 runner runner  9665472 Oct 14 19:30 hollywood_sign_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 63806966 Oct 14 19:32 walt_disney_concert_hall.mp4
+-rw-r--r-- 1 runner runner 13679068 Oct 14 19:32 walt_disney_concert_hall_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/losangeles.json
+rm 'pending_aerials/losangeles.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
