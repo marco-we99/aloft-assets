@@ -1273,3 +1273,79 @@ rm 'pending_aerials/sanfrancisco2_cityaerial.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/miami_cityaerial.json]'
+MANIFESTS payload: [pending_aerials/miami_cityaerial.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/miami_cityaerial.json ']'
++ '[' '!' -f pending_aerials/miami_cityaerial.json ']'
++ echo '=== pending_aerials/miami_cityaerial.json ==='
+=== pending_aerials/miami_cityaerial.json ===
++ cat pending_aerials/miami_cityaerial.json
+{
+  "slug": "miami_cityaerial",
+  "aerials": [
+    {
+      "name": "city",
+      "url": "https://rr5---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792003968&ei=jM3Pau-MGIraut0P0JG8qA8&ip=0.0.0.0&id=5f05dc0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792003468,&mh=qd&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228203&dur=40.016&lmt=1684252470037961&mt=1792002393&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgLW7e8Htv_ZEpzL4Er0ZiMntFnB4mLXRgVUdpwZe5hjUCIQDH_tZYt9gq56Q1D3vi2rQxk2hcIe1yG3NjEe_wztzPjg==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJG4FUREgKMJr4uR60VG8H8qpA6_sfzLJ9l9u1U0KeTrAiBJk9XVXyZIjMCO0G0f0ouTra9q2ZNR6NwaJhu6GvwEtw=="
+    }
+  ]
+}++ jq -r .slug pending_aerials/miami_cityaerial.json
++ slug=miami_cityaerial
+++ jq -r '.aerials | length' pending_aerials/miami_cityaerial.json
++ n=1
++ mkdir -p miami_cityaerial/aerials
+++ seq 0 0
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/miami_cityaerial.json
++ name=city
+++ jq -r '.aerials[0].url' pending_aerials/miami_cityaerial.json
++ url='https://rr5---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792003968&ei=jM3Pau-MGIraut0P0JG8qA8&ip=0.0.0.0&id=5f05dc0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792003468,&mh=qd&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228203&dur=40.016&lmt=1684252470037961&mt=1792002393&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgLW7e8Htv_ZEpzL4Er0ZiMntFnB4mLXRgVUdpwZe5hjUCIQDH_tZYt9gq56Q1D3vi2rQxk2hcIe1yG3NjEe_wztzPjg==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJG4FUREgKMJr4uR60VG8H8qpA6_sfzLJ9l9u1U0KeTrAiBJk9XVXyZIjMCO0G0f0ouTra9q2ZNR6NwaJhu6GvwEtw=='
++ raw=/tmp/raw_city.mp4
++ echo '[city] downloading…'
+[city] downloading…
++ curl -fsSL -o /tmp/raw_city.mp4 'https://rr5---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792003968&ei=jM3Pau-MGIraut0P0JG8qA8&ip=0.0.0.0&id=5f05dc0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792003468,&mh=qd&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228203&dur=40.016&lmt=1684252470037961&mt=1792002393&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgLW7e8Htv_ZEpzL4Er0ZiMntFnB4mLXRgVUdpwZe5hjUCIQDH_tZYt9gq56Q1D3vi2rQxk2hcIe1yG3NjEe_wztzPjg==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAJG4FUREgKMJr4uR60VG8H8qpA6_sfzLJ9l9u1U0KeTrAiBJk9XVXyZIjMCO0G0f0ouTra9q2ZNR6NwaJhu6GvwEtw=='
++ rc=0
++ echo '[city] curl exit=0'
+[city] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_city.mp4
+-rw-r--r-- 1 runner runner 8228203 Oct 14 18:45 /tmp/raw_city.mp4
+++ seq 0 0
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/miami_cityaerial.json
++ name=city
++ raw=/tmp/raw_city.mp4
++ out=miami_cityaerial/aerials/city.mp4
++ ref=miami_cityaerial/aerials/city_v2v_ref.mp4
++ echo '[city] transcoding full → miami_cityaerial/aerials/city.mp4'
+[city] transcoding full → miami_cityaerial/aerials/city.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_city.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami_cityaerial/aerials/city.mp4
++ rc=0
++ echo '[city] full ffmpeg exit=0'
+[city] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[city] trimming v2v reference → miami_cityaerial/aerials/city_v2v_ref.mp4'
+[city] trimming v2v reference → miami_cityaerial/aerials/city_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_city.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami_cityaerial/aerials/city_v2v_ref.mp4
++ rc=0
++ echo '[city] trim ffmpeg exit=0'
+[city] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la miami_cityaerial/aerials
+total 73600
+drwxr-xr-x 2 runner runner     4096 Oct 14 18:47 .
+drwxr-xr-x 3 runner runner     4096 Oct 14 18:45 ..
+-rw-r--r-- 1 runner runner 63152854 Oct 14 18:47 city.mp4
+-rw-r--r-- 1 runner runner 12199794 Oct 14 18:48 city_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/miami_cityaerial.json
+rm 'pending_aerials/miami_cityaerial.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
