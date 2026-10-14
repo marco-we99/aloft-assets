@@ -600,3 +600,202 @@ rm 'pending_aerials/chicago_01.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/neworleans.json]'
+MANIFESTS payload: [pending_aerials/neworleans.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/neworleans.json ']'
++ '[' '!' -f pending_aerials/neworleans.json ']'
++ echo '=== pending_aerials/neworleans.json ==='
+=== pending_aerials/neworleans.json ===
++ cat pending_aerials/neworleans.json
+{
+  "slug": "neworleans",
+  "aerials": [
+    {
+      "name": "saint_louis_cathedral",
+      "url": "https://rr2---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_ParXwIPWM_9EPi7Ci8AM&ip=0.0.0.0&id=b0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=7x&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227156&dur=40.016&lmt=1791049304381884&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAIkU6n_Gzglcd2DiF_wxWzyzVx6UN3j8m3stR3nfCbDIAiEApJa4OfzZpKPrUK47AnouavwpeBevFhCt91DTzfc6K8c=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgazzf-CiX_PGNOYdmbR8WN_1dtJ94S2aWs0h3RXeKb6cCIAr369_rj_izC9so9_5wuzpqBNK9JGkGn3AjiY7lyQV3"
+    },
+    {
+      "name": "jackson_square",
+      "url": "https://rr1---sn-2op5q5-5t.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PaoGSIMq8_9EPy5e4qAE&ip=0.0.0.0&id=63749b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=kq&mm=31&mn=sn-2op5q5-5t&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228223&dur=40.016&lmt=1780709151613644&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMi6QrQYAW5bNtst7ZLzzTK0wvHbj-tJgUWPRTYjVXKzAiEAiXMAFJh3l5jh35OZ4Nou_SrxsZheIa9UVRwW52kuIUo=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgfwRO4G885d9RpK23VV9xv4ToVZfSFKe6NAYmXzmgL1sCIAGp7pvJEmMd0ITDYYfFtJrMkOrfxJGeOdhv_sRbkekI"
+    },
+    {
+      "name": "garden_district",
+      "url": "https://rr1---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PasywIYWh_9EPoave8Qc&ip=0.0.0.0&id=1db71b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=Yi&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8226806&dur=40.016&lmt=1780367061600294&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAKAkCX3JQClzWPfzpMpitPo84w88-l09la38syB-jgekAiEAhCCmDwPzTyEpEw47sDTt8okJsfXdIS7MVhZdj1h0TRQ=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJABWHzZA7oH2sPU51afNtCy91VGugKkPmNyn6FdPD-HAiEAl3UcrvFqOw1eGhVqRVqnN97e5BcaGLy-F35aEf914qY="
+    },
+    {
+      "name": "french_market",
+      "url": "https://rr1---sn-qjp5q5-5h.googlevideo.com/videoplayback?expire=1791996302&ei=mq_Paqe-IpGKr9gPq9-2uQY&ip=0.0.0.0&id=cf155b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=206&met=1791995802,&mh=fq&mm=31&mn=sn-qjp5q5-5h&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230546&dur=40.016&lmt=1783919433072189&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhALqX14ZJ3Ebw-f4sPTVhptDgf1tbyfpa_OyJCoO22deOAiB7LjraxeItM1ObReZ_W2FmGAVi9gK2epSdor5OgB6i_A==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgcYWMxjvH2ozXKx04cFB6AanKKefddHNiMG4d_WB6tdECIQDi16iyvs_tOOO2VB9QSvMaYfFZQNcVjZiEQvTWQPYjPQ=="
+    }
+  ]
+}++ jq -r .slug pending_aerials/neworleans.json
++ slug=neworleans
+++ jq -r '.aerials | length' pending_aerials/neworleans.json
++ n=4
++ mkdir -p neworleans/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/neworleans.json
++ name=saint_louis_cathedral
+++ jq -r '.aerials[0].url' pending_aerials/neworleans.json
++ url='https://rr2---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_ParXwIPWM_9EPi7Ci8AM&ip=0.0.0.0&id=b0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=7x&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227156&dur=40.016&lmt=1791049304381884&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAIkU6n_Gzglcd2DiF_wxWzyzVx6UN3j8m3stR3nfCbDIAiEApJa4OfzZpKPrUK47AnouavwpeBevFhCt91DTzfc6K8c=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgazzf-CiX_PGNOYdmbR8WN_1dtJ94S2aWs0h3RXeKb6cCIAr369_rj_izC9so9_5wuzpqBNK9JGkGn3AjiY7lyQV3'
++ raw=/tmp/raw_saint_louis_cathedral.mp4
++ echo '[saint_louis_cathedral] downloading…'
+[saint_louis_cathedral] downloading…
++ curl -fsSL -o /tmp/raw_saint_louis_cathedral.mp4 'https://rr2---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_ParXwIPWM_9EPi7Ci8AM&ip=0.0.0.0&id=b0137b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=7x&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227156&dur=40.016&lmt=1791049304381884&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAIkU6n_Gzglcd2DiF_wxWzyzVx6UN3j8m3stR3nfCbDIAiEApJa4OfzZpKPrUK47AnouavwpeBevFhCt91DTzfc6K8c=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgazzf-CiX_PGNOYdmbR8WN_1dtJ94S2aWs0h3RXeKb6cCIAr369_rj_izC9so9_5wuzpqBNK9JGkGn3AjiY7lyQV3'
++ rc=0
++ echo '[saint_louis_cathedral] curl exit=0'
+[saint_louis_cathedral] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_saint_louis_cathedral.mp4
+-rw-r--r-- 1 runner runner 8227156 Oct 14 16:38 /tmp/raw_saint_louis_cathedral.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/neworleans.json
++ name=jackson_square
+++ jq -r '.aerials[1].url' pending_aerials/neworleans.json
++ url='https://rr1---sn-2op5q5-5t.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PaoGSIMq8_9EPy5e4qAE&ip=0.0.0.0&id=63749b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=kq&mm=31&mn=sn-2op5q5-5t&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228223&dur=40.016&lmt=1780709151613644&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMi6QrQYAW5bNtst7ZLzzTK0wvHbj-tJgUWPRTYjVXKzAiEAiXMAFJh3l5jh35OZ4Nou_SrxsZheIa9UVRwW52kuIUo=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgfwRO4G885d9RpK23VV9xv4ToVZfSFKe6NAYmXzmgL1sCIAGp7pvJEmMd0ITDYYfFtJrMkOrfxJGeOdhv_sRbkekI'
++ raw=/tmp/raw_jackson_square.mp4
++ echo '[jackson_square] downloading…'
+[jackson_square] downloading…
++ curl -fsSL -o /tmp/raw_jackson_square.mp4 'https://rr1---sn-2op5q5-5t.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PaoGSIMq8_9EPy5e4qAE&ip=0.0.0.0&id=63749b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=kq&mm=31&mn=sn-2op5q5-5t&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8228223&dur=40.016&lmt=1780709151613644&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAMi6QrQYAW5bNtst7ZLzzTK0wvHbj-tJgUWPRTYjVXKzAiEAiXMAFJh3l5jh35OZ4Nou_SrxsZheIa9UVRwW52kuIUo=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgfwRO4G885d9RpK23VV9xv4ToVZfSFKe6NAYmXzmgL1sCIAGp7pvJEmMd0ITDYYfFtJrMkOrfxJGeOdhv_sRbkekI'
++ rc=0
++ echo '[jackson_square] curl exit=0'
+[jackson_square] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_jackson_square.mp4
+-rw-r--r-- 1 runner runner 8228223 Oct 14 16:38 /tmp/raw_jackson_square.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/neworleans.json
++ name=garden_district
+++ jq -r '.aerials[2].url' pending_aerials/neworleans.json
++ url='https://rr1---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PasywIYWh_9EPoave8Qc&ip=0.0.0.0&id=1db71b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=Yi&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8226806&dur=40.016&lmt=1780367061600294&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAKAkCX3JQClzWPfzpMpitPo84w88-l09la38syB-jgekAiEAhCCmDwPzTyEpEw47sDTt8okJsfXdIS7MVhZdj1h0TRQ=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJABWHzZA7oH2sPU51afNtCy91VGugKkPmNyn6FdPD-HAiEAl3UcrvFqOw1eGhVqRVqnN97e5BcaGLy-F35aEf914qY='
++ raw=/tmp/raw_garden_district.mp4
++ echo '[garden_district] downloading…'
+[garden_district] downloading…
++ curl -fsSL -o /tmp/raw_garden_district.mp4 'https://rr1---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1791996302&ei=mq_PasywIYWh_9EPoave8Qc&ip=0.0.0.0&id=1db71b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791995802,&mh=Yi&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8226806&dur=40.016&lmt=1780367061600294&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAKAkCX3JQClzWPfzpMpitPo84w88-l09la38syB-jgekAiEAhCCmDwPzTyEpEw47sDTt8okJsfXdIS7MVhZdj1h0TRQ=&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAJABWHzZA7oH2sPU51afNtCy91VGugKkPmNyn6FdPD-HAiEAl3UcrvFqOw1eGhVqRVqnN97e5BcaGLy-F35aEf914qY='
++ rc=0
++ echo '[garden_district] curl exit=0'
+[garden_district] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_garden_district.mp4
+-rw-r--r-- 1 runner runner 8226806 Oct 14 16:38 /tmp/raw_garden_district.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/neworleans.json
++ name=french_market
+++ jq -r '.aerials[3].url' pending_aerials/neworleans.json
++ url='https://rr1---sn-qjp5q5-5h.googlevideo.com/videoplayback?expire=1791996302&ei=mq_Paqe-IpGKr9gPq9-2uQY&ip=0.0.0.0&id=cf155b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=206&met=1791995802,&mh=fq&mm=31&mn=sn-qjp5q5-5h&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230546&dur=40.016&lmt=1783919433072189&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhALqX14ZJ3Ebw-f4sPTVhptDgf1tbyfpa_OyJCoO22deOAiB7LjraxeItM1ObReZ_W2FmGAVi9gK2epSdor5OgB6i_A==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgcYWMxjvH2ozXKx04cFB6AanKKefddHNiMG4d_WB6tdECIQDi16iyvs_tOOO2VB9QSvMaYfFZQNcVjZiEQvTWQPYjPQ=='
++ raw=/tmp/raw_french_market.mp4
++ echo '[french_market] downloading…'
+[french_market] downloading…
++ curl -fsSL -o /tmp/raw_french_market.mp4 'https://rr1---sn-qjp5q5-5h.googlevideo.com/videoplayback?expire=1791996302&ei=mq_Paqe-IpGKr9gPq9-2uQY&ip=0.0.0.0&id=cf155b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=206&met=1791995802,&mh=fq&mm=31&mn=sn-qjp5q5-5h&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8230546&dur=40.016&lmt=1783919433072189&mt=1791995339&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhALqX14ZJ3Ebw-f4sPTVhptDgf1tbyfpa_OyJCoO22deOAiB7LjraxeItM1ObReZ_W2FmGAVi9gK2epSdor5OgB6i_A==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgcYWMxjvH2ozXKx04cFB6AanKKefddHNiMG4d_WB6tdECIQDi16iyvs_tOOO2VB9QSvMaYfFZQNcVjZiEQvTWQPYjPQ=='
++ rc=0
++ echo '[french_market] curl exit=0'
+[french_market] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_french_market.mp4
+-rw-r--r-- 1 runner runner 8230546 Oct 14 16:39 /tmp/raw_french_market.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/neworleans.json
++ name=saint_louis_cathedral
++ raw=/tmp/raw_saint_louis_cathedral.mp4
++ out=neworleans/aerials/saint_louis_cathedral.mp4
++ ref=neworleans/aerials/saint_louis_cathedral_v2v_ref.mp4
++ echo '[saint_louis_cathedral] transcoding full → neworleans/aerials/saint_louis_cathedral.mp4'
+[saint_louis_cathedral] transcoding full → neworleans/aerials/saint_louis_cathedral.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_saint_louis_cathedral.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/saint_louis_cathedral.mp4
++ rc=0
++ echo '[saint_louis_cathedral] full ffmpeg exit=0'
+[saint_louis_cathedral] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[saint_louis_cathedral] trimming v2v reference → neworleans/aerials/saint_louis_cathedral_v2v_ref.mp4'
+[saint_louis_cathedral] trimming v2v reference → neworleans/aerials/saint_louis_cathedral_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_saint_louis_cathedral.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/saint_louis_cathedral_v2v_ref.mp4
++ rc=0
++ echo '[saint_louis_cathedral] trim ffmpeg exit=0'
+[saint_louis_cathedral] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/neworleans.json
++ name=jackson_square
++ raw=/tmp/raw_jackson_square.mp4
++ out=neworleans/aerials/jackson_square.mp4
++ ref=neworleans/aerials/jackson_square_v2v_ref.mp4
++ echo '[jackson_square] transcoding full → neworleans/aerials/jackson_square.mp4'
+[jackson_square] transcoding full → neworleans/aerials/jackson_square.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_jackson_square.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/jackson_square.mp4
++ rc=0
++ echo '[jackson_square] full ffmpeg exit=0'
+[jackson_square] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[jackson_square] trimming v2v reference → neworleans/aerials/jackson_square_v2v_ref.mp4'
+[jackson_square] trimming v2v reference → neworleans/aerials/jackson_square_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_jackson_square.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/jackson_square_v2v_ref.mp4
++ rc=0
++ echo '[jackson_square] trim ffmpeg exit=0'
+[jackson_square] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/neworleans.json
++ name=garden_district
++ raw=/tmp/raw_garden_district.mp4
++ out=neworleans/aerials/garden_district.mp4
++ ref=neworleans/aerials/garden_district_v2v_ref.mp4
++ echo '[garden_district] transcoding full → neworleans/aerials/garden_district.mp4'
+[garden_district] transcoding full → neworleans/aerials/garden_district.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_garden_district.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/garden_district.mp4
++ rc=0
++ echo '[garden_district] full ffmpeg exit=0'
+[garden_district] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[garden_district] trimming v2v reference → neworleans/aerials/garden_district_v2v_ref.mp4'
+[garden_district] trimming v2v reference → neworleans/aerials/garden_district_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_garden_district.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/garden_district_v2v_ref.mp4
++ rc=0
++ echo '[garden_district] trim ffmpeg exit=0'
+[garden_district] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/neworleans.json
++ name=french_market
++ raw=/tmp/raw_french_market.mp4
++ out=neworleans/aerials/french_market.mp4
++ ref=neworleans/aerials/french_market_v2v_ref.mp4
++ echo '[french_market] transcoding full → neworleans/aerials/french_market.mp4'
+[french_market] transcoding full → neworleans/aerials/french_market.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_french_market.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/french_market.mp4
++ rc=0
++ echo '[french_market] full ffmpeg exit=0'
+[french_market] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[french_market] trimming v2v reference → neworleans/aerials/french_market_v2v_ref.mp4'
+[french_market] trimming v2v reference → neworleans/aerials/french_market_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_french_market.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart neworleans/aerials/french_market_v2v_ref.mp4
++ rc=0
++ echo '[french_market] trim ffmpeg exit=0'
+[french_market] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la neworleans/aerials
+total 278144
+drwxr-xr-x 2 runner runner     4096 Oct 14 16:43 .
+drwxr-xr-x 3 runner runner     4096 Oct 14 16:37 ..
+-rw-r--r-- 1 runner runner 55200252 Oct 14 16:43 french_market.mp4
+-rw-r--r-- 1 runner runner 11288999 Oct 14 16:43 french_market_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 64801305 Oct 14 16:42 garden_district.mp4
+-rw-r--r-- 1 runner runner 12957620 Oct 14 16:42 garden_district_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 56804187 Oct 14 16:41 jackson_square.mp4
+-rw-r--r-- 1 runner runner 10779697 Oct 14 16:41 jackson_square_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 60643478 Oct 14 16:40 saint_louis_cathedral.mp4
+-rw-r--r-- 1 runner runner 12319470 Oct 14 16:40 saint_louis_cathedral_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/neworleans.json
+rm 'pending_aerials/neworleans.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
