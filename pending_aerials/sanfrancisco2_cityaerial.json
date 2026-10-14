@@ -1,0 +1,9 @@
+{
+  "slug": "sanfrancisco2_cityaerial",
+  "aerials": [
+    {
+      "name": "city",
+      "url": "https://rr1---sn-2op5q5-5g.googlevideo.com/videoplayback?expire=1792003518&ei=ysvPatC1NpGKr9gPq9-2uQY&ip=0.0.0.0&id=286b0a0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=212&met=1792003018,&mh=YV&mm=31&mn=sn-2op5q5-5g&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8239682&dur=40.016&lmt=1685090126818117&mt=1792002393&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgM7AG90CLTddIFcSDzHRec97zCDlcn9hl4VePtzOZ6LUCIQDly579vT4fqHyeHqkA5XC-eWQ5mD5xaPP3LpKgBDjW2A==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgBKyABRQX3i_9USqR6GOyJPcliLkKhmgqQMfGewC51F4CIFqTUYKP4qV90AWbFSAQ4-1V65d58DZjqqMYsMt-wFMh"
+    }
+  ]
+}
