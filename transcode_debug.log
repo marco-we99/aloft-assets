@@ -799,3 +799,202 @@ rm 'pending_aerials/neworleans.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/miami.json]'
+MANIFESTS payload: [pending_aerials/miami.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/miami.json ']'
++ '[' '!' -f pending_aerials/miami.json ']'
++ echo '=== pending_aerials/miami.json ==='
+=== pending_aerials/miami.json ===
++ cat pending_aerials/miami.json
+{
+  "slug": "miami",
+  "aerials": [
+    {
+      "name": "coconut_grove",
+      "url": "https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasK4CPWM_9EPi7Ci8AM&ip=0.0.0.0&id=59ec5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=GK&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8236923&dur=40.016&lmt=1783056048121909&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgRJ3LvU4w_YvQZ4SEWRBvCaMnDgI-rJHlT-riufDLL1YCICIAdnVYSXzUCqS_9oE2sg1Tly8Lq4hOXM4QoKLkX0B_&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgBlONkwoUoujko3EjQ2gfEH4HPnbKCS7jRzJ7sypmyJwCIChwzsMSSVe-A_UWuOcAVEGsX-7dt6Ge7g8iAytJvrlV"
+    },
+    {
+      "name": "vizcaya_museum",
+      "url": "https://rr2---sn-2op5q5-5g.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPauqUDIqBkucP2K3YuQM&ip=0.0.0.0&id=f4bb160000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=qR&mm=31&mn=sn-2op5q5-5g&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232795&dur=40.016&lmt=1685384135440939&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgdCGxZjanMrulHNyoyNvDCTIMNEmK7yT7qZ6FuTWob88CIQDMoE6EIQgSnLymGuVOH_oPXTueVkOeMSer6hwGkeiynA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAI4SyyUE6ndEyzCGzxfzEOn182sUivt4Ld_geGAjij9aAiBF4Rq1y-2q6aClH1YvRl8itFXUuxU4gIw-hH3pZPTRfg=="
+    },
+    {
+      "name": "perez_art_museum",
+      "url": "https://rr2---sn-qjp5q5-5c.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPaoLtD7iKr9gPl4616QY&ip=0.0.0.0&id=bd7e6a0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=220&met=1792000382,&mh=OQ&mm=31&mn=sn-qjp5q5-5c&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8235621&dur=40.016&lmt=1685150979002460&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJVsb38pKhpRk-gEtEqmw0BJGOrwtFPPLKgnUV1e2RiRAiEAwS8ztg_xRVUXv_07E7u71C0SwMX6k3NIUKXBxRg9CN4=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgW3_ipd2eCCrl6dQjyTMH0_Dn7G_jDF1hNDhPra49FewCICcagEXtJ1czau27pfxNkW_tx_M_ugnKf9LatntE2W_8"
+    },
+    {
+      "name": "bayside_marketplace",
+      "url": "https://rr4---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasrID6ydy_sP4OvCsAY&ip=0.0.0.0&id=601c5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=193&met=1792000382,&mh=ZW&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227606&dur=40.016&lmt=1783079947345065&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhANeN7xIPKf_-JUhrT6o0eWSQkPNNqr7rYGD6k7U-qqRSAiAXl2LcYW7j2Z1T_UT0S_7L8lJVNCt4QefOCW2UVtlV1w==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAM9Asjkt5hgGWnUvCJrdLqF2mTg-cEUH2ZmhidxHD41BAiEA7u5T7CiMbeZAL6hQoXIXrLi6dXlurt4UT0xsbnDZ1EE="
+    }
+  ]
+}++ jq -r .slug pending_aerials/miami.json
++ slug=miami
+++ jq -r '.aerials | length' pending_aerials/miami.json
++ n=4
++ mkdir -p miami/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/miami.json
++ name=coconut_grove
+++ jq -r '.aerials[0].url' pending_aerials/miami.json
++ url='https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasK4CPWM_9EPi7Ci8AM&ip=0.0.0.0&id=59ec5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=GK&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8236923&dur=40.016&lmt=1783056048121909&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgRJ3LvU4w_YvQZ4SEWRBvCaMnDgI-rJHlT-riufDLL1YCICIAdnVYSXzUCqS_9oE2sg1Tly8Lq4hOXM4QoKLkX0B_&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgBlONkwoUoujko3EjQ2gfEH4HPnbKCS7jRzJ7sypmyJwCIChwzsMSSVe-A_UWuOcAVEGsX-7dt6Ge7g8iAytJvrlV'
++ raw=/tmp/raw_coconut_grove.mp4
++ echo '[coconut_grove] downloading…'
+[coconut_grove] downloading…
++ curl -fsSL -o /tmp/raw_coconut_grove.mp4 'https://rr3---sn-p5qlsn76.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasK4CPWM_9EPi7Ci8AM&ip=0.0.0.0&id=59ec5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=GK&mm=31&mn=sn-p5qlsn76&ms=au&mv=D&mvi=3&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8236923&dur=40.016&lmt=1783056048121909&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgRJ3LvU4w_YvQZ4SEWRBvCaMnDgI-rJHlT-riufDLL1YCICIAdnVYSXzUCqS_9oE2sg1Tly8Lq4hOXM4QoKLkX0B_&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgBlONkwoUoujko3EjQ2gfEH4HPnbKCS7jRzJ7sypmyJwCIChwzsMSSVe-A_UWuOcAVEGsX-7dt6Ge7g8iAytJvrlV'
++ rc=0
++ echo '[coconut_grove] curl exit=0'
+[coconut_grove] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_coconut_grove.mp4
+-rw-r--r-- 1 runner runner 8236923 Oct 14 17:55 /tmp/raw_coconut_grove.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/miami.json
++ name=vizcaya_museum
+++ jq -r '.aerials[1].url' pending_aerials/miami.json
++ url='https://rr2---sn-2op5q5-5g.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPauqUDIqBkucP2K3YuQM&ip=0.0.0.0&id=f4bb160000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=qR&mm=31&mn=sn-2op5q5-5g&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232795&dur=40.016&lmt=1685384135440939&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgdCGxZjanMrulHNyoyNvDCTIMNEmK7yT7qZ6FuTWob88CIQDMoE6EIQgSnLymGuVOH_oPXTueVkOeMSer6hwGkeiynA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAI4SyyUE6ndEyzCGzxfzEOn182sUivt4Ld_geGAjij9aAiBF4Rq1y-2q6aClH1YvRl8itFXUuxU4gIw-hH3pZPTRfg=='
++ raw=/tmp/raw_vizcaya_museum.mp4
++ echo '[vizcaya_museum] downloading…'
+[vizcaya_museum] downloading…
++ curl -fsSL -o /tmp/raw_vizcaya_museum.mp4 'https://rr2---sn-2op5q5-5g.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPauqUDIqBkucP2K3YuQM&ip=0.0.0.0&id=f4bb160000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792000382,&mh=qR&mm=31&mn=sn-2op5q5-5g&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8232795&dur=40.016&lmt=1685384135440939&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgdCGxZjanMrulHNyoyNvDCTIMNEmK7yT7qZ6FuTWob88CIQDMoE6EIQgSnLymGuVOH_oPXTueVkOeMSer6hwGkeiynA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhAI4SyyUE6ndEyzCGzxfzEOn182sUivt4Ld_geGAjij9aAiBF4Rq1y-2q6aClH1YvRl8itFXUuxU4gIw-hH3pZPTRfg=='
++ rc=0
++ echo '[vizcaya_museum] curl exit=0'
+[vizcaya_museum] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_vizcaya_museum.mp4
+-rw-r--r-- 1 runner runner 8232795 Oct 14 17:55 /tmp/raw_vizcaya_museum.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/miami.json
++ name=perez_art_museum
+++ jq -r '.aerials[2].url' pending_aerials/miami.json
++ url='https://rr2---sn-qjp5q5-5c.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPaoLtD7iKr9gPl4616QY&ip=0.0.0.0&id=bd7e6a0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=220&met=1792000382,&mh=OQ&mm=31&mn=sn-qjp5q5-5c&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8235621&dur=40.016&lmt=1685150979002460&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJVsb38pKhpRk-gEtEqmw0BJGOrwtFPPLKgnUV1e2RiRAiEAwS8ztg_xRVUXv_07E7u71C0SwMX6k3NIUKXBxRg9CN4=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgW3_ipd2eCCrl6dQjyTMH0_Dn7G_jDF1hNDhPra49FewCICcagEXtJ1czau27pfxNkW_tx_M_ugnKf9LatntE2W_8'
++ raw=/tmp/raw_perez_art_museum.mp4
++ echo '[perez_art_museum] downloading…'
+[perez_art_museum] downloading…
++ curl -fsSL -o /tmp/raw_perez_art_museum.mp4 'https://rr2---sn-qjp5q5-5c.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPaoLtD7iKr9gPl4616QY&ip=0.0.0.0&id=bd7e6a0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=220&met=1792000382,&mh=OQ&mm=31&mn=sn-qjp5q5-5c&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8235621&dur=40.016&lmt=1685150979002460&mt=1791999059&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJVsb38pKhpRk-gEtEqmw0BJGOrwtFPPLKgnUV1e2RiRAiEAwS8ztg_xRVUXv_07E7u71C0SwMX6k3NIUKXBxRg9CN4=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgW3_ipd2eCCrl6dQjyTMH0_Dn7G_jDF1hNDhPra49FewCICcagEXtJ1czau27pfxNkW_tx_M_ugnKf9LatntE2W_8'
++ rc=0
++ echo '[perez_art_museum] curl exit=0'
+[perez_art_museum] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_perez_art_museum.mp4
+-rw-r--r-- 1 runner runner 8235621 Oct 14 17:56 /tmp/raw_perez_art_museum.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/miami.json
++ name=bayside_marketplace
+++ jq -r '.aerials[3].url' pending_aerials/miami.json
++ url='https://rr4---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasrID6ydy_sP4OvCsAY&ip=0.0.0.0&id=601c5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=193&met=1792000382,&mh=ZW&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227606&dur=40.016&lmt=1783079947345065&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhANeN7xIPKf_-JUhrT6o0eWSQkPNNqr7rYGD6k7U-qqRSAiAXl2LcYW7j2Z1T_UT0S_7L8lJVNCt4QefOCW2UVtlV1w==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAM9Asjkt5hgGWnUvCJrdLqF2mTg-cEUH2ZmhidxHD41BAiEA7u5T7CiMbeZAL6hQoXIXrLi6dXlurt4UT0xsbnDZ1EE='
++ raw=/tmp/raw_bayside_marketplace.mp4
++ echo '[bayside_marketplace] downloading…'
+[bayside_marketplace] downloading…
++ curl -fsSL -o /tmp/raw_bayside_marketplace.mp4 'https://rr4---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792000882&ei=fsHPasrID6ydy_sP4OvCsAY&ip=0.0.0.0&id=601c5b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=193&met=1792000382,&mh=ZW&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227606&dur=40.016&lmt=1783079947345065&mt=1792000225&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhANeN7xIPKf_-JUhrT6o0eWSQkPNNqr7rYGD6k7U-qqRSAiAXl2LcYW7j2Z1T_UT0S_7L8lJVNCt4QefOCW2UVtlV1w==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAM9Asjkt5hgGWnUvCJrdLqF2mTg-cEUH2ZmhidxHD41BAiEA7u5T7CiMbeZAL6hQoXIXrLi6dXlurt4UT0xsbnDZ1EE='
++ rc=0
++ echo '[bayside_marketplace] curl exit=0'
+[bayside_marketplace] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_bayside_marketplace.mp4
+-rw-r--r-- 1 runner runner 8227606 Oct 14 17:56 /tmp/raw_bayside_marketplace.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/miami.json
++ name=coconut_grove
++ raw=/tmp/raw_coconut_grove.mp4
++ out=miami/aerials/coconut_grove.mp4
++ ref=miami/aerials/coconut_grove_v2v_ref.mp4
++ echo '[coconut_grove] transcoding full → miami/aerials/coconut_grove.mp4'
+[coconut_grove] transcoding full → miami/aerials/coconut_grove.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_coconut_grove.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/coconut_grove.mp4
++ rc=0
++ echo '[coconut_grove] full ffmpeg exit=0'
+[coconut_grove] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[coconut_grove] trimming v2v reference → miami/aerials/coconut_grove_v2v_ref.mp4'
+[coconut_grove] trimming v2v reference → miami/aerials/coconut_grove_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_coconut_grove.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/coconut_grove_v2v_ref.mp4
++ rc=0
++ echo '[coconut_grove] trim ffmpeg exit=0'
+[coconut_grove] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/miami.json
++ name=vizcaya_museum
++ raw=/tmp/raw_vizcaya_museum.mp4
++ out=miami/aerials/vizcaya_museum.mp4
++ ref=miami/aerials/vizcaya_museum_v2v_ref.mp4
++ echo '[vizcaya_museum] transcoding full → miami/aerials/vizcaya_museum.mp4'
+[vizcaya_museum] transcoding full → miami/aerials/vizcaya_museum.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_vizcaya_museum.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/vizcaya_museum.mp4
++ rc=0
++ echo '[vizcaya_museum] full ffmpeg exit=0'
+[vizcaya_museum] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[vizcaya_museum] trimming v2v reference → miami/aerials/vizcaya_museum_v2v_ref.mp4'
+[vizcaya_museum] trimming v2v reference → miami/aerials/vizcaya_museum_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_vizcaya_museum.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/vizcaya_museum_v2v_ref.mp4
++ rc=0
++ echo '[vizcaya_museum] trim ffmpeg exit=0'
+[vizcaya_museum] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/miami.json
++ name=perez_art_museum
++ raw=/tmp/raw_perez_art_museum.mp4
++ out=miami/aerials/perez_art_museum.mp4
++ ref=miami/aerials/perez_art_museum_v2v_ref.mp4
++ echo '[perez_art_museum] transcoding full → miami/aerials/perez_art_museum.mp4'
+[perez_art_museum] transcoding full → miami/aerials/perez_art_museum.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_perez_art_museum.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/perez_art_museum.mp4
++ rc=0
++ echo '[perez_art_museum] full ffmpeg exit=0'
+[perez_art_museum] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[perez_art_museum] trimming v2v reference → miami/aerials/perez_art_museum_v2v_ref.mp4'
+[perez_art_museum] trimming v2v reference → miami/aerials/perez_art_museum_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_perez_art_museum.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/perez_art_museum_v2v_ref.mp4
++ rc=0
++ echo '[perez_art_museum] trim ffmpeg exit=0'
+[perez_art_museum] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/miami.json
++ name=bayside_marketplace
++ raw=/tmp/raw_bayside_marketplace.mp4
++ out=miami/aerials/bayside_marketplace.mp4
++ ref=miami/aerials/bayside_marketplace_v2v_ref.mp4
++ echo '[bayside_marketplace] transcoding full → miami/aerials/bayside_marketplace.mp4'
+[bayside_marketplace] transcoding full → miami/aerials/bayside_marketplace.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_bayside_marketplace.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/bayside_marketplace.mp4
++ rc=0
++ echo '[bayside_marketplace] full ffmpeg exit=0'
+[bayside_marketplace] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[bayside_marketplace] trimming v2v reference → miami/aerials/bayside_marketplace_v2v_ref.mp4'
+[bayside_marketplace] trimming v2v reference → miami/aerials/bayside_marketplace_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_bayside_marketplace.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart miami/aerials/bayside_marketplace_v2v_ref.mp4
++ rc=0
++ echo '[bayside_marketplace] trim ffmpeg exit=0'
+[bayside_marketplace] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la miami/aerials
+total 255996
+drwxr-xr-x 2 runner runner     4096 Oct 14 18:00 .
+drwxr-xr-x 3 runner runner     4096 Oct 14 17:55 ..
+-rw-r--r-- 1 runner runner 56993704 Oct 14 18:00 bayside_marketplace.mp4
+-rw-r--r-- 1 runner runner 10507563 Oct 14 18:00 bayside_marketplace_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 55706129 Oct 14 17:57 coconut_grove.mp4
+-rw-r--r-- 1 runner runner 11084113 Oct 14 17:57 coconut_grove_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 52870390 Oct 14 17:59 perez_art_museum.mp4
+-rw-r--r-- 1 runner runner 10466909 Oct 14 17:59 perez_art_museum_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 54540014 Oct 14 17:58 vizcaya_museum.mp4
+-rw-r--r-- 1 runner runner  9943277 Oct 14 17:58 vizcaya_museum_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/miami.json
+rm 'pending_aerials/miami.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
