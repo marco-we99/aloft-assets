@@ -28,7 +28,13 @@
             "LUXOR PYRAMID"
           ],
           "composed_url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/jdp595ashh/captioned.mp4",
-          "posted": []
+          "posted": [
+            {
+              "platform": "tiktok",
+              "url": "https://vm.tiktok.com/ZN8SdLgv7/",
+              "posted_at": "2026-10-14T12:55:07.037664Z"
+            }
+          ]
         }
       ]
     },
@@ -44,7 +50,13 @@
             "STATUE OF LIBERTY"
           ],
           "composed_url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cqim9ledz1/captioned.mp4",
-          "posted": []
+          "posted": [
+            {
+              "platform": "tiktok",
+              "url": "https://vm.tiktok.com/ZN8SewPyS/",
+              "posted_at": "2026-10-14T12:55:07.037664Z"
+            }
+          ]
         }
       ]
     }
