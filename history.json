@@ -59,6 +59,22 @@
           ]
         }
       ]
+    },
+    "CHICAGO": {
+      "reels": [
+        {
+          "reel_id": "chicago_01",
+          "created_at": "2026-10-14T13:26:50.399713Z",
+          "landmarks": [
+            "WILLIS TOWER",
+            "CLOUD GATE",
+            "MCCORMICK PLACE",
+            "NAVY PIER"
+          ],
+          "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/gjjxzbiz6f/out.mp4",
+          "posted": []
+        }
+      ]
     }
   }
 }
