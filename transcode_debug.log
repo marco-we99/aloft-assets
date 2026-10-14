@@ -401,3 +401,202 @@ rm 'pending_aerials/lasvegas_01.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/chicago_01.json]'
+MANIFESTS payload: [pending_aerials/chicago_01.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/chicago_01.json ']'
++ '[' '!' -f pending_aerials/chicago_01.json ']'
++ echo '=== pending_aerials/chicago_01.json ==='
+=== pending_aerials/chicago_01.json ===
++ cat pending_aerials/chicago_01.json
+{
+  "slug": "chicago_01",
+  "aerials": [
+    {
+      "name": "willis_tower",
+      "url": "https://rr5---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1791983999&ei=i3_Par7kA4C22LYPyvDIoA8&ip=0.0.0.0&id=8a8c510000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=75&met=1791983499,&mh=py&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8246235&dur=40.016&lmt=1689047701595846&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAK1GzKr4e4AEg7fhluc361dqRthoirHeneF1-F46OPfsAiEA48J5LuoJvYVlZus2QZcj2QxycnACa8c-cINEh-1uCDA=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAPTvAyjxM47QQ21b7T0H_Lbe1AhUqbBIq-X_xtp0h1ZHAiEA_EleJQMVxfmKu3KGhQGJ2iZ27jN-CaHEpR93SrftByo="
+    },
+    {
+      "name": "cloud_gate",
+      "url": "https://rr1---sn-qjp5q5-5q.googlevideo.com/videoplayback?expire=1791983999&ei=i3_PasrQBeWd_9EP1fzW4Qg&ip=0.0.0.0&id=bc1fb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983499,&mh=iy&mm=31&mn=sn-qjp5q5-5q&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227169&dur=40.016&lmt=1770136282726893&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgHhG31jQriJ9gD5udnq04dfKTaKA_lH2yOcL_8ManoJsCIF-2xVibR5cfLZ5EJQzlKQsFRwxJWBRhgA3WXlUDzCA7&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhALRCTa6f0yr-sElZoeJFfBfHwvZtEweA5OIYlavbok3HAiBZOlg9fvqSpWQOn4_XEn8DE5pHKlBJTz5c2UmGlOyi9A=="
+    },
+    {
+      "name": "mccormick_place",
+      "url": "https://rr5---sn-2op5q5-5f.googlevideo.com/videoplayback?expire=1791983998&ei=in_PaoCHNrWjy_sP8_zI8Qk&ip=0.0.0.0&id=d773900000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=Pn&mm=31&mn=sn-2op5q5-5f&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256701&dur=40.016&lmt=1683723510368362&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgeqOr63BE7Ii-9mTe0zpcXVT_dY3fMii2JxQw0BB4l5sCIQDxyOKlLEGQmPHUEqmlaTUJ7kYjFSe39lk09iu6X-BAvA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgZFLqBTE30VyjNwBjcBS0jng_KQqeHhH0qe9MBwbp5PgCIQCb3ZlMk_7VxivP74oH8JCoyX7BO6CpQiRgKFu0L1ZeAQ=="
+    },
+    {
+      "name": "navy_pier",
+      "url": "https://rr5---sn-p5qlsnd6.googlevideo.com/videoplayback?expire=1791983998&ei=in_PapeOM-iN_9EPmaqN-AM&ip=0.0.0.0&id=4934a90000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=x4&mm=31&mn=sn-p5qlsnd6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8129001&dur=40.016&lmt=1700939487938032&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgf6wpf_NDbIMXHsvgPBFJizTAdOuhRI_uYB9doUfGBqcCIQDmDZC5vh1tottwzjaVn81GcWLi_crWwurkLIEsdGUm0Q==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAKJ0rIo5_Vc9QyDpyVLJRlcdAHNDmEwR5Tf2vqmPorGGAiEA0pbxdsuaBua-jJyGlLOawADtdAZPfVP828-VlGmym1Q="
+    }
+  ]
+}++ jq -r .slug pending_aerials/chicago_01.json
++ slug=chicago_01
+++ jq -r '.aerials | length' pending_aerials/chicago_01.json
++ n=4
++ mkdir -p chicago_01/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/chicago_01.json
++ name=willis_tower
+++ jq -r '.aerials[0].url' pending_aerials/chicago_01.json
++ url='https://rr5---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1791983999&ei=i3_Par7kA4C22LYPyvDIoA8&ip=0.0.0.0&id=8a8c510000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=75&met=1791983499,&mh=py&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8246235&dur=40.016&lmt=1689047701595846&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAK1GzKr4e4AEg7fhluc361dqRthoirHeneF1-F46OPfsAiEA48J5LuoJvYVlZus2QZcj2QxycnACa8c-cINEh-1uCDA=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAPTvAyjxM47QQ21b7T0H_Lbe1AhUqbBIq-X_xtp0h1ZHAiEA_EleJQMVxfmKu3KGhQGJ2iZ27jN-CaHEpR93SrftByo='
++ raw=/tmp/raw_willis_tower.mp4
++ echo '[willis_tower] downloading…'
+[willis_tower] downloading…
++ curl -fsSL -o /tmp/raw_willis_tower.mp4 'https://rr5---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1791983999&ei=i3_Par7kA4C22LYPyvDIoA8&ip=0.0.0.0&id=8a8c510000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=75&met=1791983499,&mh=py&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8246235&dur=40.016&lmt=1689047701595846&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAK1GzKr4e4AEg7fhluc361dqRthoirHeneF1-F46OPfsAiEA48J5LuoJvYVlZus2QZcj2QxycnACa8c-cINEh-1uCDA=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAPTvAyjxM47QQ21b7T0H_Lbe1AhUqbBIq-X_xtp0h1ZHAiEA_EleJQMVxfmKu3KGhQGJ2iZ27jN-CaHEpR93SrftByo='
++ rc=0
++ echo '[willis_tower] curl exit=0'
+[willis_tower] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_willis_tower.mp4
+-rw-r--r-- 1 runner runner 8246235 Oct 14 13:13 /tmp/raw_willis_tower.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/chicago_01.json
++ name=cloud_gate
+++ jq -r '.aerials[1].url' pending_aerials/chicago_01.json
++ url='https://rr1---sn-qjp5q5-5q.googlevideo.com/videoplayback?expire=1791983999&ei=i3_PasrQBeWd_9EP1fzW4Qg&ip=0.0.0.0&id=bc1fb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983499,&mh=iy&mm=31&mn=sn-qjp5q5-5q&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227169&dur=40.016&lmt=1770136282726893&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgHhG31jQriJ9gD5udnq04dfKTaKA_lH2yOcL_8ManoJsCIF-2xVibR5cfLZ5EJQzlKQsFRwxJWBRhgA3WXlUDzCA7&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhALRCTa6f0yr-sElZoeJFfBfHwvZtEweA5OIYlavbok3HAiBZOlg9fvqSpWQOn4_XEn8DE5pHKlBJTz5c2UmGlOyi9A=='
++ raw=/tmp/raw_cloud_gate.mp4
++ echo '[cloud_gate] downloading…'
+[cloud_gate] downloading…
++ curl -fsSL -o /tmp/raw_cloud_gate.mp4 'https://rr1---sn-qjp5q5-5q.googlevideo.com/videoplayback?expire=1791983999&ei=i3_PasrQBeWd_9EP1fzW4Qg&ip=0.0.0.0&id=bc1fb30000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983499,&mh=iy&mm=31&mn=sn-qjp5q5-5q&ms=au&mv=D&mvi=1&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8227169&dur=40.016&lmt=1770136282726893&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRAIgHhG31jQriJ9gD5udnq04dfKTaKA_lH2yOcL_8ManoJsCIF-2xVibR5cfLZ5EJQzlKQsFRwxJWBRhgA3WXlUDzCA7&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhALRCTa6f0yr-sElZoeJFfBfHwvZtEweA5OIYlavbok3HAiBZOlg9fvqSpWQOn4_XEn8DE5pHKlBJTz5c2UmGlOyi9A=='
++ rc=0
++ echo '[cloud_gate] curl exit=0'
+[cloud_gate] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_cloud_gate.mp4
+-rw-r--r-- 1 runner runner 8227169 Oct 14 13:14 /tmp/raw_cloud_gate.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/chicago_01.json
++ name=mccormick_place
+++ jq -r '.aerials[2].url' pending_aerials/chicago_01.json
++ url='https://rr5---sn-2op5q5-5f.googlevideo.com/videoplayback?expire=1791983998&ei=in_PaoCHNrWjy_sP8_zI8Qk&ip=0.0.0.0&id=d773900000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=Pn&mm=31&mn=sn-2op5q5-5f&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256701&dur=40.016&lmt=1683723510368362&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgeqOr63BE7Ii-9mTe0zpcXVT_dY3fMii2JxQw0BB4l5sCIQDxyOKlLEGQmPHUEqmlaTUJ7kYjFSe39lk09iu6X-BAvA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgZFLqBTE30VyjNwBjcBS0jng_KQqeHhH0qe9MBwbp5PgCIQCb3ZlMk_7VxivP74oH8JCoyX7BO6CpQiRgKFu0L1ZeAQ=='
++ raw=/tmp/raw_mccormick_place.mp4
++ echo '[mccormick_place] downloading…'
+[mccormick_place] downloading…
++ curl -fsSL -o /tmp/raw_mccormick_place.mp4 'https://rr5---sn-2op5q5-5f.googlevideo.com/videoplayback?expire=1791983998&ei=in_PaoCHNrWjy_sP8_zI8Qk&ip=0.0.0.0&id=d773900000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=Pn&mm=31&mn=sn-2op5q5-5f&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256701&dur=40.016&lmt=1683723510368362&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgeqOr63BE7Ii-9mTe0zpcXVT_dY3fMii2JxQw0BB4l5sCIQDxyOKlLEGQmPHUEqmlaTUJ7kYjFSe39lk09iu6X-BAvA==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgZFLqBTE30VyjNwBjcBS0jng_KQqeHhH0qe9MBwbp5PgCIQCb3ZlMk_7VxivP74oH8JCoyX7BO6CpQiRgKFu0L1ZeAQ=='
++ rc=0
++ echo '[mccormick_place] curl exit=0'
+[mccormick_place] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_mccormick_place.mp4
+-rw-r--r-- 1 runner runner 8256701 Oct 14 13:14 /tmp/raw_mccormick_place.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/chicago_01.json
++ name=navy_pier
+++ jq -r '.aerials[3].url' pending_aerials/chicago_01.json
++ url='https://rr5---sn-p5qlsnd6.googlevideo.com/videoplayback?expire=1791983998&ei=in_PapeOM-iN_9EPmaqN-AM&ip=0.0.0.0&id=4934a90000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=x4&mm=31&mn=sn-p5qlsnd6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8129001&dur=40.016&lmt=1700939487938032&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgf6wpf_NDbIMXHsvgPBFJizTAdOuhRI_uYB9doUfGBqcCIQDmDZC5vh1tottwzjaVn81GcWLi_crWwurkLIEsdGUm0Q==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAKJ0rIo5_Vc9QyDpyVLJRlcdAHNDmEwR5Tf2vqmPorGGAiEA0pbxdsuaBua-jJyGlLOawADtdAZPfVP828-VlGmym1Q='
++ raw=/tmp/raw_navy_pier.mp4
++ echo '[navy_pier] downloading…'
+[navy_pier] downloading…
++ curl -fsSL -o /tmp/raw_navy_pier.mp4 'https://rr5---sn-p5qlsnd6.googlevideo.com/videoplayback?expire=1791983998&ei=in_PapeOM-iN_9EPmaqN-AM&ip=0.0.0.0&id=4934a90000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1791983498,&mh=x4&mm=31&mn=sn-p5qlsnd6&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8129001&dur=40.016&lmt=1700939487938032&mt=1791983185&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgf6wpf_NDbIMXHsvgPBFJizTAdOuhRI_uYB9doUfGBqcCIQDmDZC5vh1tottwzjaVn81GcWLi_crWwurkLIEsdGUm0Q==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAKJ0rIo5_Vc9QyDpyVLJRlcdAHNDmEwR5Tf2vqmPorGGAiEA0pbxdsuaBua-jJyGlLOawADtdAZPfVP828-VlGmym1Q='
++ rc=0
++ echo '[navy_pier] curl exit=0'
+[navy_pier] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_navy_pier.mp4
+-rw-r--r-- 1 runner runner 8129001 Oct 14 13:14 /tmp/raw_navy_pier.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/chicago_01.json
++ name=willis_tower
++ raw=/tmp/raw_willis_tower.mp4
++ out=chicago_01/aerials/willis_tower.mp4
++ ref=chicago_01/aerials/willis_tower_v2v_ref.mp4
++ echo '[willis_tower] transcoding full → chicago_01/aerials/willis_tower.mp4'
+[willis_tower] transcoding full → chicago_01/aerials/willis_tower.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_willis_tower.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/willis_tower.mp4
++ rc=0
++ echo '[willis_tower] full ffmpeg exit=0'
+[willis_tower] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[willis_tower] trimming v2v reference → chicago_01/aerials/willis_tower_v2v_ref.mp4'
+[willis_tower] trimming v2v reference → chicago_01/aerials/willis_tower_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_willis_tower.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/willis_tower_v2v_ref.mp4
++ rc=0
++ echo '[willis_tower] trim ffmpeg exit=0'
+[willis_tower] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/chicago_01.json
++ name=cloud_gate
++ raw=/tmp/raw_cloud_gate.mp4
++ out=chicago_01/aerials/cloud_gate.mp4
++ ref=chicago_01/aerials/cloud_gate_v2v_ref.mp4
++ echo '[cloud_gate] transcoding full → chicago_01/aerials/cloud_gate.mp4'
+[cloud_gate] transcoding full → chicago_01/aerials/cloud_gate.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_cloud_gate.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/cloud_gate.mp4
++ rc=0
++ echo '[cloud_gate] full ffmpeg exit=0'
+[cloud_gate] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[cloud_gate] trimming v2v reference → chicago_01/aerials/cloud_gate_v2v_ref.mp4'
+[cloud_gate] trimming v2v reference → chicago_01/aerials/cloud_gate_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_cloud_gate.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/cloud_gate_v2v_ref.mp4
++ rc=0
++ echo '[cloud_gate] trim ffmpeg exit=0'
+[cloud_gate] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/chicago_01.json
++ name=mccormick_place
++ raw=/tmp/raw_mccormick_place.mp4
++ out=chicago_01/aerials/mccormick_place.mp4
++ ref=chicago_01/aerials/mccormick_place_v2v_ref.mp4
++ echo '[mccormick_place] transcoding full → chicago_01/aerials/mccormick_place.mp4'
+[mccormick_place] transcoding full → chicago_01/aerials/mccormick_place.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_mccormick_place.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/mccormick_place.mp4
++ rc=0
++ echo '[mccormick_place] full ffmpeg exit=0'
+[mccormick_place] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[mccormick_place] trimming v2v reference → chicago_01/aerials/mccormick_place_v2v_ref.mp4'
+[mccormick_place] trimming v2v reference → chicago_01/aerials/mccormick_place_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_mccormick_place.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/mccormick_place_v2v_ref.mp4
++ rc=0
++ echo '[mccormick_place] trim ffmpeg exit=0'
+[mccormick_place] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/chicago_01.json
++ name=navy_pier
++ raw=/tmp/raw_navy_pier.mp4
++ out=chicago_01/aerials/navy_pier.mp4
++ ref=chicago_01/aerials/navy_pier_v2v_ref.mp4
++ echo '[navy_pier] transcoding full → chicago_01/aerials/navy_pier.mp4'
+[navy_pier] transcoding full → chicago_01/aerials/navy_pier.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_navy_pier.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/navy_pier.mp4
++ rc=0
++ echo '[navy_pier] full ffmpeg exit=0'
+[navy_pier] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[navy_pier] trimming v2v reference → chicago_01/aerials/navy_pier_v2v_ref.mp4'
+[navy_pier] trimming v2v reference → chicago_01/aerials/navy_pier_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_navy_pier.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart chicago_01/aerials/navy_pier_v2v_ref.mp4
++ rc=0
++ echo '[navy_pier] trim ffmpeg exit=0'
+[navy_pier] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la chicago_01/aerials
+total 214000
+drwxr-xr-x 2 runner runner     4096 Oct 14 13:17 .
+drwxr-xr-x 4 runner runner     4096 Oct 14 13:13 ..
+-rw-r--r-- 1 runner runner 59886890 Oct 14 13:16 cloud_gate.mp4
+-rw-r--r-- 1 runner runner 12397858 Oct 14 13:16 cloud_gate_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 40373464 Oct 14 13:16 mccormick_place.mp4
+-rw-r--r-- 1 runner runner  6866721 Oct 14 13:16 mccormick_place_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 32833083 Oct 14 13:17 navy_pier.mp4
+-rw-r--r-- 1 runner runner  6466813 Oct 14 13:17 navy_pier_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 50760567 Oct 14 13:15 willis_tower.mp4
+-rw-r--r-- 1 runner runner  9534185 Oct 14 13:15 willis_tower_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/chicago_01.json
+rm 'pending_aerials/chicago_01.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
