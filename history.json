@@ -24,7 +24,12 @@
             "GOLDEN GATE PARK"
           ],
           "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/rox7p0a575/out.mp4",
-          "posted": []
+          "posted": [
+            {
+              "platform": "tiktok",
+              "url": "https://vm.tiktok.com/ZN8SAcf34/"
+            }
+          ]
         }
       ]
     },
