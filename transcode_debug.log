@@ -1700,3 +1700,202 @@ rm 'pending_aerials/washington_cityaerial.json'
 + echo overall_rc=0
 overall_rc=0
 + exit 0
++ echo 'MANIFESTS payload: [pending_aerials/washington.json]'
+MANIFESTS payload: [pending_aerials/washington.json]
++ echo ---
+---
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_aerials/washington.json ']'
++ '[' '!' -f pending_aerials/washington.json ']'
++ echo '=== pending_aerials/washington.json ==='
+=== pending_aerials/washington.json ===
++ cat pending_aerials/washington.json
+{
+  "slug": "washington",
+  "aerials": [
+    {
+      "name": "lincoln_memorial",
+      "url": "https://rr4---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1792098631&ei=Uz_Rat6sJKbFy_sPk-Sn6AU&ip=0.0.0.0&id=8df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=234&met=1792098131,&mh=KL&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8248320&dur=40.016&lmt=1778453529204276&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ7Kf5u5Ck-SMU1Al5hbN-SjT-DJ4IW0w5IceB0IyZr6AiEAiznPX35nacQc7fZo05EytKri6FsKkYtZh81rpDEE54E=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgcBIqiORwTL8Mu11OUcl4Q0H8VbCfDGfUAgsoiUgksOYCIHM_XrHDEn1_-vVpom6RRF7fQDBUwkVX6i_nHath2z8L"
+    },
+    {
+      "name": "united_states_capitol",
+      "url": "https://rr5---sn-qjp5q5-54.googlevideo.com/videoplayback?expire=1792098632&ei=VD_RauX8EIiGkucPg9ig-Q8&ip=0.0.0.0&id=c2501b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098132,&mh=i6&mm=31&mn=sn-qjp5q5-54&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8238501&dur=40.016&lmt=1779262305027175&mt=1792096054&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgOTRJKyvgOItNtfn9hKI-aBDRk786tSkEuv74-1PBvUUCIQDX7Lb3hR8RPrBxYEMSmo6q2qINtOu5Jg7fkZfeXGpJqw==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgMFprfW1djI_drrSgk614_KTq75IaYhYI-OwxthzRjUsCIQCrXw5_WeMUTHwmqjSqW3v1HPN2mb2F9Ut0OqbdCDsheg=="
+    },
+    {
+      "name": "washington_monument",
+      "url": "https://rr2---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792098632&ei=VD_Rar_tN562kucPlZ7G8AU&ip=0.0.0.0&id=0372eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=242&met=1792098132,&mh=UB&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8264624&dur=40.016&lmt=1778357934841134&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgfGlaR4BLc_mkVPFnozuMZA5PV9NqI8CtOP7wjjWn-UACIQDC69g2azwwpvehxiHyVub_V8nVbRTPcjcYk0ie3OWogg==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAMHX_A2-iG0qXhSXzPP9bs5mfmBMk_QWMVQNonOxDvYIAiEAozGMa0L3Dmup_BN5GIYMusofmOV_wYgZ7W4B8WxAusc="
+    },
+    {
+      "name": "jefferson_memorial",
+      "url": "https://rr2---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792098633&ei=VT_RauWWKIDyy_sP27eesQQ&ip=0.0.0.0&id=9f491b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098133,&mh=ja&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256555&dur=40.016&lmt=1779936918216273&mt=1792097145&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAIPHmJLqBjEPcrnf-IzYDBDKUcPDsXmkJZ7TJcaYy7_jAiBko48mOQc-HqlLhgcElgpeV9I-DNMfJp0QildGNgRTdQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAImZ31YEwc8d_gfgJlFjiATj9PYJIol4-B2ujyqc3HitAiEA3FJdKp451DQMFYY45Yvu-TOMRCMQ8GGPbEsmLCB_nSo="
+    }
+  ]
+}++ jq -r .slug pending_aerials/washington.json
++ slug=washington
+++ jq -r '.aerials | length' pending_aerials/washington.json
++ n=4
++ mkdir -p washington/aerials
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/washington.json
++ name=lincoln_memorial
+++ jq -r '.aerials[0].url' pending_aerials/washington.json
++ url='https://rr4---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1792098631&ei=Uz_Rat6sJKbFy_sPk-Sn6AU&ip=0.0.0.0&id=8df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=234&met=1792098131,&mh=KL&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8248320&dur=40.016&lmt=1778453529204276&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ7Kf5u5Ck-SMU1Al5hbN-SjT-DJ4IW0w5IceB0IyZr6AiEAiznPX35nacQc7fZo05EytKri6FsKkYtZh81rpDEE54E=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgcBIqiORwTL8Mu11OUcl4Q0H8VbCfDGfUAgsoiUgksOYCIHM_XrHDEn1_-vVpom6RRF7fQDBUwkVX6i_nHath2z8L'
++ raw=/tmp/raw_lincoln_memorial.mp4
++ echo '[lincoln_memorial] downloading…'
+[lincoln_memorial] downloading…
++ curl -fsSL -o /tmp/raw_lincoln_memorial.mp4 'https://rr4---sn-2op5q5-5n.googlevideo.com/videoplayback?expire=1792098631&ei=Uz_Rat6sJKbFy_sPk-Sn6AU&ip=0.0.0.0&id=8df6eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=234&met=1792098131,&mh=KL&mm=31&mn=sn-2op5q5-5n&ms=au&mv=D&mvi=4&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8248320&dur=40.016&lmt=1778453529204276&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRgIhAJ7Kf5u5Ck-SMU1Al5hbN-SjT-DJ4IW0w5IceB0IyZr6AiEAiznPX35nacQc7fZo05EytKri6FsKkYtZh81rpDEE54E=&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRAIgcBIqiORwTL8Mu11OUcl4Q0H8VbCfDGfUAgsoiUgksOYCIHM_XrHDEn1_-vVpom6RRF7fQDBUwkVX6i_nHath2z8L'
++ rc=0
++ echo '[lincoln_memorial] curl exit=0'
+[lincoln_memorial] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_lincoln_memorial.mp4
+-rw-r--r-- 1 runner runner 8248320 Oct 15 21:05 /tmp/raw_lincoln_memorial.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/washington.json
++ name=united_states_capitol
+++ jq -r '.aerials[1].url' pending_aerials/washington.json
++ url='https://rr5---sn-qjp5q5-54.googlevideo.com/videoplayback?expire=1792098632&ei=VD_RauX8EIiGkucPg9ig-Q8&ip=0.0.0.0&id=c2501b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098132,&mh=i6&mm=31&mn=sn-qjp5q5-54&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8238501&dur=40.016&lmt=1779262305027175&mt=1792096054&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgOTRJKyvgOItNtfn9hKI-aBDRk786tSkEuv74-1PBvUUCIQDX7Lb3hR8RPrBxYEMSmo6q2qINtOu5Jg7fkZfeXGpJqw==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgMFprfW1djI_drrSgk614_KTq75IaYhYI-OwxthzRjUsCIQCrXw5_WeMUTHwmqjSqW3v1HPN2mb2F9Ut0OqbdCDsheg=='
++ raw=/tmp/raw_united_states_capitol.mp4
++ echo '[united_states_capitol] downloading…'
+[united_states_capitol] downloading…
++ curl -fsSL -o /tmp/raw_united_states_capitol.mp4 'https://rr5---sn-qjp5q5-54.googlevideo.com/videoplayback?expire=1792098632&ei=VD_RauX8EIiGkucPg9ig-Q8&ip=0.0.0.0&id=c2501b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098132,&mh=i6&mm=31&mn=sn-qjp5q5-54&ms=au&mv=D&mvi=5&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8238501&dur=40.016&lmt=1779262305027175&mt=1792096054&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgOTRJKyvgOItNtfn9hKI-aBDRk786tSkEuv74-1PBvUUCIQDX7Lb3hR8RPrBxYEMSmo6q2qINtOu5Jg7fkZfeXGpJqw==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIgMFprfW1djI_drrSgk614_KTq75IaYhYI-OwxthzRjUsCIQCrXw5_WeMUTHwmqjSqW3v1HPN2mb2F9Ut0OqbdCDsheg=='
++ rc=0
++ echo '[united_states_capitol] curl exit=0'
+[united_states_capitol] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_united_states_capitol.mp4
+-rw-r--r-- 1 runner runner 8238501 Oct 15 21:05 /tmp/raw_united_states_capitol.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/washington.json
++ name=washington_monument
+++ jq -r '.aerials[2].url' pending_aerials/washington.json
++ url='https://rr2---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792098632&ei=VD_Rar_tN562kucPlZ7G8AU&ip=0.0.0.0&id=0372eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=242&met=1792098132,&mh=UB&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8264624&dur=40.016&lmt=1778357934841134&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgfGlaR4BLc_mkVPFnozuMZA5PV9NqI8CtOP7wjjWn-UACIQDC69g2azwwpvehxiHyVub_V8nVbRTPcjcYk0ie3OWogg==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAMHX_A2-iG0qXhSXzPP9bs5mfmBMk_QWMVQNonOxDvYIAiEAozGMa0L3Dmup_BN5GIYMusofmOV_wYgZ7W4B8WxAusc='
++ raw=/tmp/raw_washington_monument.mp4
++ echo '[washington_monument] downloading…'
+[washington_monument] downloading…
++ curl -fsSL -o /tmp/raw_washington_monument.mp4 'https://rr2---sn-qjp5q5-5x.googlevideo.com/videoplayback?expire=1792098632&ei=VD_Rar_tN562kucPlZ7G8AU&ip=0.0.0.0&id=0372eb0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&cps=242&met=1792098132,&mh=UB&mm=31&mn=sn-qjp5q5-5x&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8264624&dur=40.016&lmt=1778357934841134&mt=1792097920&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIgfGlaR4BLc_mkVPFnozuMZA5PV9NqI8CtOP7wjjWn-UACIQDC69g2azwwpvehxiHyVub_V8nVbRTPcjcYk0ie3OWogg==&lsparams=cps,met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAMHX_A2-iG0qXhSXzPP9bs5mfmBMk_QWMVQNonOxDvYIAiEAozGMa0L3Dmup_BN5GIYMusofmOV_wYgZ7W4B8WxAusc='
++ rc=0
++ echo '[washington_monument] curl exit=0'
+[washington_monument] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_washington_monument.mp4
+-rw-r--r-- 1 runner runner 8264624 Oct 15 21:06 /tmp/raw_washington_monument.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/washington.json
++ name=jefferson_memorial
+++ jq -r '.aerials[3].url' pending_aerials/washington.json
++ url='https://rr2---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792098633&ei=VT_RauWWKIDyy_sP27eesQQ&ip=0.0.0.0&id=9f491b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098133,&mh=ja&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256555&dur=40.016&lmt=1779936918216273&mt=1792097145&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAIPHmJLqBjEPcrnf-IzYDBDKUcPDsXmkJZ7TJcaYy7_jAiBko48mOQc-HqlLhgcElgpeV9I-DNMfJp0QildGNgRTdQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAImZ31YEwc8d_gfgJlFjiATj9PYJIol4-B2ujyqc3HitAiEA3FJdKp451DQMFYY45Yvu-TOMRCMQ8GGPbEsmLCB_nSo='
++ raw=/tmp/raw_jefferson_memorial.mp4
++ echo '[jefferson_memorial] downloading…'
+[jefferson_memorial] downloading…
++ curl -fsSL -o /tmp/raw_jefferson_memorial.mp4 'https://rr2---sn-p5qlsn7d.googlevideo.com/videoplayback?expire=1792098633&ei=VT_RauWWKIDyy_sP27eesQQ&ip=0.0.0.0&id=9f491b0000000001&itag=374&source=aerial_view&requiressl=yes&xpc=Eghoy-b0JXoBAQ==&met=1792098133,&mh=ja&mm=31&mn=sn-p5qlsn7d&ms=au&mv=D&mvi=2&pl=0&rms=au,au&susc=av&acao=yes&mime=video/mp4&vprv=1&rqh=1&gir=yes&clen=8256555&dur=40.016&lmt=1779936918216273&mt=1792097145&txp=0011224&sparams=expire,ei,ip,id,itag,source,requiressl,xpc,susc,acao,mime,vprv,rqh,gir,clen,dur,lmt&sig=AE0s2JYwRQIhAIPHmJLqBjEPcrnf-IzYDBDKUcPDsXmkJZ7TJcaYy7_jAiBko48mOQc-HqlLhgcElgpeV9I-DNMfJp0QildGNgRTdQ==&lsparams=met,mh,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRgIhAImZ31YEwc8d_gfgJlFjiATj9PYJIol4-B2ujyqc3HitAiEA3FJdKp451DQMFYY45Yvu-TOMRCMQ8GGPbEsmLCB_nSo='
++ rc=0
++ echo '[jefferson_memorial] curl exit=0'
+[jefferson_memorial] curl exit=0
++ '[' 0 -ne 0 ']'
++ ls -la /tmp/raw_jefferson_memorial.mp4
+-rw-r--r-- 1 runner runner 8256555 Oct 15 21:06 /tmp/raw_jefferson_memorial.mp4
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[0].name' pending_aerials/washington.json
++ name=lincoln_memorial
++ raw=/tmp/raw_lincoln_memorial.mp4
++ out=washington/aerials/lincoln_memorial.mp4
++ ref=washington/aerials/lincoln_memorial_v2v_ref.mp4
++ echo '[lincoln_memorial] transcoding full → washington/aerials/lincoln_memorial.mp4'
+[lincoln_memorial] transcoding full → washington/aerials/lincoln_memorial.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_lincoln_memorial.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/lincoln_memorial.mp4
++ rc=0
++ echo '[lincoln_memorial] full ffmpeg exit=0'
+[lincoln_memorial] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[lincoln_memorial] trimming v2v reference → washington/aerials/lincoln_memorial_v2v_ref.mp4'
+[lincoln_memorial] trimming v2v reference → washington/aerials/lincoln_memorial_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_lincoln_memorial.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/lincoln_memorial_v2v_ref.mp4
++ rc=0
++ echo '[lincoln_memorial] trim ffmpeg exit=0'
+[lincoln_memorial] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[1].name' pending_aerials/washington.json
++ name=united_states_capitol
++ raw=/tmp/raw_united_states_capitol.mp4
++ out=washington/aerials/united_states_capitol.mp4
++ ref=washington/aerials/united_states_capitol_v2v_ref.mp4
++ echo '[united_states_capitol] transcoding full → washington/aerials/united_states_capitol.mp4'
+[united_states_capitol] transcoding full → washington/aerials/united_states_capitol.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_united_states_capitol.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/united_states_capitol.mp4
++ rc=0
++ echo '[united_states_capitol] full ffmpeg exit=0'
+[united_states_capitol] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[united_states_capitol] trimming v2v reference → washington/aerials/united_states_capitol_v2v_ref.mp4'
+[united_states_capitol] trimming v2v reference → washington/aerials/united_states_capitol_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_united_states_capitol.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/united_states_capitol_v2v_ref.mp4
++ rc=0
++ echo '[united_states_capitol] trim ffmpeg exit=0'
+[united_states_capitol] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[2].name' pending_aerials/washington.json
++ name=washington_monument
++ raw=/tmp/raw_washington_monument.mp4
++ out=washington/aerials/washington_monument.mp4
++ ref=washington/aerials/washington_monument_v2v_ref.mp4
++ echo '[washington_monument] transcoding full → washington/aerials/washington_monument.mp4'
+[washington_monument] transcoding full → washington/aerials/washington_monument.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_washington_monument.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/washington_monument.mp4
++ rc=0
++ echo '[washington_monument] full ffmpeg exit=0'
+[washington_monument] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[washington_monument] trimming v2v reference → washington/aerials/washington_monument_v2v_ref.mp4'
+[washington_monument] trimming v2v reference → washington/aerials/washington_monument_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_washington_monument.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/washington_monument_v2v_ref.mp4
++ rc=0
++ echo '[washington_monument] trim ffmpeg exit=0'
+[washington_monument] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.aerials[3].name' pending_aerials/washington.json
++ name=jefferson_memorial
++ raw=/tmp/raw_jefferson_memorial.mp4
++ out=washington/aerials/jefferson_memorial.mp4
++ ref=washington/aerials/jefferson_memorial_v2v_ref.mp4
++ echo '[jefferson_memorial] transcoding full → washington/aerials/jefferson_memorial.mp4'
+[jefferson_memorial] transcoding full → washington/aerials/jefferson_memorial.mp4
++ ffmpeg -y -nostdin -loglevel error -i /tmp/raw_jefferson_memorial.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/jefferson_memorial.mp4
++ rc=0
++ echo '[jefferson_memorial] full ffmpeg exit=0'
+[jefferson_memorial] full ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ echo '[jefferson_memorial] trimming v2v reference → washington/aerials/jefferson_memorial_v2v_ref.mp4'
+[jefferson_memorial] trimming v2v reference → washington/aerials/jefferson_memorial_v2v_ref.mp4
++ ffmpeg -y -nostdin -loglevel error -ss 4 -t 8 -i /tmp/raw_jefferson_memorial.mp4 -c:v libx264 -preset fast -crf 20 -vf 'scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1' -pix_fmt yuv420p -r 30 -an -movflags +faststart washington/aerials/jefferson_memorial_v2v_ref.mp4
++ rc=0
++ echo '[jefferson_memorial] trim ffmpeg exit=0'
+[jefferson_memorial] trim ffmpeg exit=0
++ '[' 0 -ne 0 ']'
++ ls -la washington/aerials
+total 215208
+drwxr-xr-x 2 runner runner     4096 Oct 15 21:10 .
+drwxr-xr-x 3 runner runner     4096 Oct 15 21:05 ..
+-rw-r--r-- 1 runner runner 41449916 Oct 15 21:10 jefferson_memorial.mp4
+-rw-r--r-- 1 runner runner  9090347 Oct 15 21:10 jefferson_memorial_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 47284649 Oct 15 21:07 lincoln_memorial.mp4
+-rw-r--r-- 1 runner runner  9793969 Oct 15 21:07 lincoln_memorial_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 53429828 Oct 15 21:08 united_states_capitol.mp4
+-rw-r--r-- 1 runner runner  9647363 Oct 15 21:08 united_states_capitol_v2v_ref.mp4
+-rw-r--r-- 1 runner runner 41406235 Oct 15 21:09 washington_monument.mp4
+-rw-r--r-- 1 runner runner  8244813 Oct 15 21:09 washington_monument_v2v_ref.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_aerials/washington.json
+rm 'pending_aerials/washington.json'
++ IFS=
++ read -r manifest
++ echo overall_rc=0
+overall_rc=0
++ exit 0
