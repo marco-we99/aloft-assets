@@ -111,7 +111,12 @@
             "FRENCH MARKET"
           ],
           "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/zezar6nzdw/out.mp4",
-          "posted": []
+          "posted": [
+            {
+              "platform": "tiktok",
+              "url": "https://vm.tiktok.com/ZN8SDRc7S/"
+            }
+          ]
         }
       ]
     },
