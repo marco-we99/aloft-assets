@@ -1,0 +1,116 @@
+name: TikTok Upload
+
+# Triggered when the pipeline pushes a pending_tiktok/<name>.json
+# manifest alongside the video it points to. The workflow then
+# refreshes the stored TikTok refresh token, uploads the video to
+# @xaloftx's drafts/inbox (or direct publish, depending on manifest
+# mode), writes a receipt to tiktok_uploads/, and removes the pending
+# manifest.
+
+on:
+  push:
+    paths:
+      - 'pending_tiktok/*.json'
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need previous commit to diff for new manifests
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Find pending manifests
+        id: find
+        run: |
+          files=$(git diff --name-only HEAD~1 HEAD -- 'pending_tiktok/*.json' || true)
+          if [ -z "$files" ]; then
+            echo "No pending manifests touched by this push; nothing to do."
+            echo "do_upload=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "do_upload=true" >> "$GITHUB_OUTPUT"
+            echo "manifests<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$files" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload each manifest
+        if: steps.find.outputs.do_upload == 'true'
+        id: upload
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          MANIFESTS: ${{ steps.find.outputs.manifests }}
+        run: |
+          set +e
+          exec > >(tee -a tiktok_debug.log) 2>&1
+          set -xuo pipefail
+
+          overall_rc=0
+          while IFS= read -r manifest; do
+            [ -z "$manifest" ] && continue
+            if [ ! -f "$manifest" ]; then
+              echo "WARN: $manifest not on disk, skipping"
+              continue
+            fi
+            echo "=== Processing $manifest ==="
+            cat "$manifest" || true
+            python3 scripts/upload_to_tiktok.py "$manifest"
+            rc=$?
+            if [ $rc -eq 0 ]; then
+              # Successful upload: remove the pending manifest.
+              git rm "$manifest"
+            else
+              overall_rc=$rc
+            fi
+          done <<< "$MANIFESTS"
+          exit $overall_rc
+
+      - name: Commit + push receipts (always, so debug log is saved on failure too)
+        if: always() && steps.find.outputs.do_upload == 'true'
+        run: |
+          git config user.email "noreply@anthropic.com"
+          git config user.name "ALOFT TikTok uploader"
+          git add -A
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "tiktok: upload results [skip ci]"
+          git pull --rebase origin main
+          git push
+
+      - name: Rotate refresh token in repo secret
+        # TikTok rotates refresh tokens on every exchange — the one we
+        # started this run with has already been invalidated. The job
+        # exports the fresh refresh_token via GITHUB_OUTPUT; this step
+        # pushes it back into the repo secret so the next workflow run
+        # can authenticate.
+        if: always() && steps.upload.outputs.new_refresh_token != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_REFRESH: ${{ steps.upload.outputs.new_refresh_token }}
+        run: |
+          # The default GITHUB_TOKEN cannot modify repo secrets, so
+          # this step just warns if a PAT isn't configured. If you set
+          # a secret named TIKTOK_ADMIN_PAT (a fine-grained PAT with
+          # Secrets: Read/Write on this repo), swap the env above and
+          # the gh secret command will succeed.
+          echo "New refresh token (last 8 chars): ...${NEW_REFRESH: -8}"
+          if [ -n "${{ secrets.TIKTOK_ADMIN_PAT }}" ]; then
+            echo "$NEW_REFRESH" | GH_TOKEN="${{ secrets.TIKTOK_ADMIN_PAT }}" \
+              gh secret set TIKTOK_REFRESH_TOKEN --repo ${{ github.repository }}
+            echo "TIKTOK_REFRESH_TOKEN secret rotated successfully."
+          else
+            echo "::warning::TIKTOK_ADMIN_PAT secret not set — refresh token NOT rotated."
+            echo "::warning::Next workflow run will fail until you manually update"
+            echo "::warning::TIKTOK_REFRESH_TOKEN or add a TIKTOK_ADMIN_PAT secret."
+          fi
