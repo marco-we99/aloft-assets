@@ -22,3 +22,28 @@ TikTok refresh failed: {'error': 'invalid_grant', 'error_description': 'Refresh 
 + IFS=
 + read -r manifest
 + exit 1
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_tiktok/miami_original.json ']'
++ '[' '!' -f pending_tiktok/miami_original.json ']'
++ echo '=== Processing pending_tiktok/miami_original.json ==='
+=== Processing pending_tiktok/miami_original.json ===
++ cat pending_tiktok/miami_original.json
+{
+  "video_path": "videos/miami_original.mp4",
+  "caption": "The only American city founded by a woman — on land her orange trees alone survived. Miami from above. #miami #miamibeach #aerial #coconutgrove #vizcaya #travelusa #fyp #foryou",
+  "mode": "inbox",
+  "city": "Miami",
+  "reel_id": "miami_01_original",
+  "retry": 1
+}
++ python3 scripts/upload_to_tiktok.py pending_tiktok/miami_original.json
+[miami_01_original] Miami — uploading /home/runner/work/aloft-assets/aloft-assets/videos/miami_original.mp4 (19,379,353 bytes) mode=inbox
+TikTok refresh failed: {'error': 'invalid_grant', 'error_description': 'Refresh token is invalid or expired.', 'log_id': '20261016234145539C66D6A8DD08B73D31'}
++ rc=1
++ '[' 1 -eq 0 ']'
++ overall_rc=1
++ IFS=
++ read -r manifest
++ exit 1
