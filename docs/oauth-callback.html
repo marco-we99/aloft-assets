@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALOFT — TikTok OAuth Callback</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         background:#0E1220; color:#F5F0E6; max-width:720px;
+         margin:60px auto; padding:0 24px 60px; }
+  h1   { letter-spacing:2px; font-weight:700; margin:0 0 24px; }
+  h2   { color:#C8A564; margin:32px 0 8px; font-size:16px;
+         letter-spacing:1px; text-transform:uppercase; }
+  p    { color:#D5CFBB; margin:0 0 16px; }
+  pre, code { background:#1a1f36; color:#F5F0E6; padding:16px;
+              border:1px solid #2a3050; border-radius:6px;
+              font: 14px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+              word-break:break-all; white-space:pre-wrap; display:block; }
+  .btn { display:inline-block; padding:12px 20px; background:#C8A564;
+         color:#0E1220; border-radius:6px; font-weight:700;
+         text-decoration:none; margin-top:12px; cursor:pointer;
+         border:0; font-size:14px; }
+  .err { color:#ff8080; }
+  .ok  { color:#80ff80; }
+</style>
+</head>
+<body>
+<h1>ALOFT · TikTok OAuth Callback</h1>
+<div id="out">Reading response…</div>
+<script>
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const code  = params.get('code');
+  const state = params.get('state');
+  const err   = params.get('error');
+  const desc  = params.get('error_description');
+  const out   = document.getElementById('out');
+
+  if (err) {
+    out.innerHTML = `
+      <h2 class="err">Authorization failed</h2>
+      <p><strong>${err}</strong></p>
+      <p>${desc || ''}</p>
+      <p>Close this tab and start the login again.</p>`;
+    return;
+  }
+
+  if (!code) {
+    out.innerHTML = `
+      <h2 class="err">No authorization code in URL</h2>
+      <p>Open this page from a TikTok OAuth redirect, not directly.</p>`;
+    return;
+  }
+
+  out.innerHTML = `
+    <h2 class="ok">Authorization received</h2>
+    <p>Copy the authorization code below and paste it into the terminal
+    running <code>tiktok_upload.py login</code>.</p>
+    <h2>Authorization code</h2>
+    <pre id="code">${code}</pre>
+    <button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('code').innerText).then(()=>this.innerText='Copied ✓')">Copy to clipboard</button>
+    <h2>State (verify this matches)</h2>
+    <pre>${state || '(none)'}</pre>`;
+})();
+</script>
+</body>
+</html>
