@@ -160,6 +160,15 @@ def wait_for_publish(access_token: str, publish_id: str,
              f"(publish_id={publish_id})")
 
 
+def _export_output(key: str, value: str) -> None:
+    """Write a single key=value line into GITHUB_OUTPUT so a later
+    workflow step can read it via steps.<id>.outputs.<key>."""
+    gh_env = os.environ.get("GITHUB_OUTPUT")
+    if gh_env:
+        with open(gh_env, "a") as fh:
+            fh.write(f"{key}={value}\n")
+
+
 def main() -> None:
     if len(sys.argv) != 2:
         sys.exit("usage: upload_to_tiktok.py <manifest.json>")
@@ -179,8 +188,14 @@ def main() -> None:
     print(f"[{reel_id}] {city} — uploading {video_path} ({size:,} bytes) "
           f"mode={mode}")
 
+    # Refresh FIRST. TikTok rotates the refresh_token on every refresh
+    # call — if we skip saving the new one and anything downstream
+    # fails, the stored secret is now stale and the next run can't
+    # authenticate. So export the new token to the workflow output
+    # BEFORE anything else that could throw.
     access_token, new_refresh_token = refresh_access_token()
-    print(f"[{reel_id}] token refreshed")
+    _export_output("new_refresh_token", new_refresh_token)
+    print(f"[{reel_id}] token refreshed + exported for secret rotation")
 
     publish_id, upload_url = init_upload(
         access_token, size, mode, caption, privacy)
@@ -189,9 +204,22 @@ def main() -> None:
     put_video(upload_url, video_path)
     print(f"[{reel_id}] video bytes uploaded")
 
-    final = wait_for_publish(access_token, publish_id)
-    status = (final.get("data") or {}).get("status")
-    print(f"[{reel_id}] final status: {status}")
+    # The TikTok inbox endpoint reports SEND_TO_USER_INBOX somewhere in
+    # the first 2-10 minutes. If we time out we treat it as "likely
+    # succeeded, finalize later" rather than fail — the video is in
+    # TikTok's hands at this point, and marking the run failed just so
+    # we can hunt a non-terminal status doesn't help anyone.
+    try:
+        final = wait_for_publish(access_token, publish_id, timeout_s=600)
+        status = (final.get("data") or {}).get("status")
+        print(f"[{reel_id}] final status: {status}")
+    except SystemExit as e:
+        if "didn't complete in" in str(e):
+            status = "PENDING_LONG"
+            print(f"[{reel_id}] status still pending after 10 min — "
+                  f"treating as uploaded; verify in the TikTok app")
+        else:
+            raise
 
     # Write a result file next to the manifest so the workflow can
     # commit it as a receipt (and so we never silently lose the fact
@@ -211,14 +239,6 @@ def main() -> None:
     result_path = result_dir / (manifest_path.stem + ".json")
     result_path.write_text(json.dumps(result, indent=2))
     print(f"[{reel_id}] receipt → {result_path.relative_to(REPO_ROOT)}")
-
-    # Export the fresh refresh token so the workflow can update the
-    # repository secret (TikTok rotates refresh tokens on each refresh;
-    # the old one stops working the moment this one is issued).
-    gh_env = os.environ.get("GITHUB_OUTPUT")
-    if gh_env:
-        with open(gh_env, "a") as fh:
-            fh.write(f"new_refresh_token={new_refresh_token}\n")
 
 
 if __name__ == "__main__":
