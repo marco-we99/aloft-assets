@@ -1,0 +1,59 @@
+{
+  "account": "xAloftx",
+  "snapshots": [
+    {
+      "captured_at": "2026-10-15T22:56:00+02:00",
+      "note": "Day 1 after Vegas/NY/Chicago/NOLA/SF/LA posted; DC + Miami not yet posted",
+      "profile": {
+        "followers": 68,
+        "following": 76,
+        "likes_total": 25
+      },
+      "reels": [
+        {"city": "LAS VEGAS",     "views": 14},
+        {"city": "NEW YORK",      "views": 10},
+        {"city": "CHICAGO",       "views": 10},
+        {"city": "NEW ORLEANS",   "views": 8},
+        {"city": "SAN FRANCISCO", "views": 14},
+        {"city": "LOS ANGELES",   "views": 0, "note": "just posted"}
+      ]
+    },
+    {
+      "captured_at": "2026-10-16T15:12:00+02:00",
+      "note": "Day 2 — DC posted, Miami still pending",
+      "profile": {
+        "followers": 112,
+        "following": 72,
+        "likes_total": 55
+      },
+      "reels": [
+        {"city": "LAS VEGAS",     "views": 17},
+        {"city": "NEW YORK",      "views": 14},
+        {"city": "CHICAGO",       "views": 15},
+        {"city": "NEW ORLEANS",   "views": 15},
+        {"city": "SAN FRANCISCO", "views": 21},
+        {"city": "LOS ANGELES",   "views": 18},
+        {"city": "WASHINGTON DC", "views": 10, "note": "just posted"}
+      ]
+    },
+    {
+      "captured_at": "2026-10-17T18:01:00+02:00",
+      "note": "Day 3 — all 8 originals live (Miami posted today), batch complete",
+      "profile": {
+        "followers": 171,
+        "following": 118,
+        "likes_total": 108
+      },
+      "reels": [
+        {"city": "LAS VEGAS",     "views": 25},
+        {"city": "NEW YORK",      "views": 23},
+        {"city": "CHICAGO",       "views": 23},
+        {"city": "NEW ORLEANS",   "views": 22},
+        {"city": "SAN FRANCISCO", "views": 35},
+        {"city": "LOS ANGELES",   "views": 30},
+        {"city": "WASHINGTON DC", "views": 31},
+        {"city": "MIAMI",         "views": 13, "note": "posted today"}
+      ]
+    }
+  ]
+}
