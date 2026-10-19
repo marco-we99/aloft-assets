@@ -1,0 +1,92 @@
+name: Fetch Everygen videos
+
+# Downloads clips from the user's Everygen library (media.viewmax.io)
+# into the repo. The cloud container's egress proxy can't reach
+# viewmax.io, so this runs on GitHub infrastructure, pulls each URL
+# with curl, commits the files, and deletes the manifest.
+#
+# Manifest shape: pending_everygen/<slug>.json
+#   {
+#     "slug": "newyork",
+#     "clips": [
+#       { "name": "empire_state_building", "url": "https://media.viewmax.io/..." },
+#       ...
+#     ]
+#   }
+# Files land at videos/<slug>/<name>.mp4.
+
+on:
+  push:
+    paths:
+      - 'pending_everygen/*.json'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find pending manifests
+        id: find
+        run: |
+          files=$(git diff --name-only HEAD~1 HEAD -- 'pending_everygen/*.json' || true)
+          if [ -z "$files" ]; then
+            echo "do_fetch=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "do_fetch=true" >> "$GITHUB_OUTPUT"
+            echo "manifests<<EOF" >> "$GITHUB_OUTPUT"
+            echo "$files" >> "$GITHUB_OUTPUT"
+            echo "EOF" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download clips
+        if: steps.find.outputs.do_fetch == 'true'
+        env:
+          MANIFESTS: ${{ steps.find.outputs.manifests }}
+        run: |
+          set +e
+          exec > >(tee -a everygen_fetch.log) 2>&1
+          set -xuo pipefail
+          overall_rc=0
+          while IFS= read -r manifest; do
+            [ -z "$manifest" ] && continue
+            [ ! -f "$manifest" ] && { echo "WARN missing $manifest"; continue; }
+            echo "=== $manifest ==="
+            cat "$manifest"
+
+            slug=$(jq -r '.slug' "$manifest")
+            n=$(jq -r '.clips | length' "$manifest")
+            mkdir -p "videos/${slug}"
+
+            for i in $(seq 0 $((n - 1))); do
+              name=$(jq -r ".clips[$i].name" "$manifest")
+              url=$(jq -r ".clips[$i].url"  "$manifest")
+              out="videos/${slug}/${name}.mp4"
+              echo "[${name}] curl ..."
+              curl -fsSL -o "$out" "$url"
+              rc=$?
+              echo "[${name}] exit=$rc"
+              [ $rc -ne 0 ] && overall_rc=$rc
+              ls -la "$out" 2>&1 || true
+            done
+
+            ls -la "videos/${slug}"
+            [ $overall_rc -eq 0 ] && git rm "$manifest"
+          done <<< "$MANIFESTS"
+          exit $overall_rc
+
+      - name: Commit + push
+        if: always() && steps.find.outputs.do_fetch == 'true'
+        run: |
+          git config user.email "noreply@anthropic.com"
+          git config user.name "ALOFT Everygen fetcher"
+          git add -A
+          git diff --cached --quiet && echo "nothing" && exit 0
+          git commit -m "fetch everygen clips [skip ci]"
+          git pull --rebase origin main
+          git push
