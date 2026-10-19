@@ -1,0 +1,109 @@
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_everygen/newyork.json ']'
++ '[' '!' -f pending_everygen/newyork.json ']'
++ echo '=== pending_everygen/newyork.json ==='
+=== pending_everygen/newyork.json ===
++ cat pending_everygen/newyork.json
+{
+  "slug": "newyork",
+  "clips": [
+    {
+      "name": "empire_state_building",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447494010372621/a525ccea-192b-447a-a235-1b739a20e563.mp4"
+    },
+    {
+      "name": "central_park",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447497754628462/af48ecdb-1dc8-4b93-b104-028fbc9251b7.mp4"
+    },
+    {
+      "name": "statue_of_liberty",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498427290104/ecb90156-edb8-4cdd-a3d7-3438c83ed638.mp4"
+    },
+    {
+      "name": "brooklyn_bridge",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498742862160/b4c5d431-a5a5-447f-b52a-0d79f799fc93.mp4"
+    }
+  ]
+}
+++ jq -r .slug pending_everygen/newyork.json
++ slug=newyork
+++ jq -r '.clips | length' pending_everygen/newyork.json
++ n=4
++ mkdir -p videos/newyork
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[0].name' pending_everygen/newyork.json
++ name=empire_state_building
+++ jq -r '.clips[0].url' pending_everygen/newyork.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447494010372621/a525ccea-192b-447a-a235-1b739a20e563.mp4
++ out=videos/newyork/empire_state_building.mp4
++ echo '[empire_state_building] curl ...'
+[empire_state_building] curl ...
++ curl -fsSL -o videos/newyork/empire_state_building.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447494010372621/a525ccea-192b-447a-a235-1b739a20e563.mp4
++ rc=0
++ echo '[empire_state_building] exit=0'
+[empire_state_building] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/newyork/empire_state_building.mp4
+-rw-r--r-- 1 runner runner 3737577 Oct 19 21:39 videos/newyork/empire_state_building.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[1].name' pending_everygen/newyork.json
++ name=central_park
+++ jq -r '.clips[1].url' pending_everygen/newyork.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447497754628462/af48ecdb-1dc8-4b93-b104-028fbc9251b7.mp4
++ out=videos/newyork/central_park.mp4
++ echo '[central_park] curl ...'
+[central_park] curl ...
++ curl -fsSL -o videos/newyork/central_park.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447497754628462/af48ecdb-1dc8-4b93-b104-028fbc9251b7.mp4
++ rc=0
++ echo '[central_park] exit=0'
+[central_park] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/newyork/central_park.mp4
+-rw-r--r-- 1 runner runner 2324901 Oct 19 21:39 videos/newyork/central_park.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[2].name' pending_everygen/newyork.json
++ name=statue_of_liberty
+++ jq -r '.clips[2].url' pending_everygen/newyork.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498427290104/ecb90156-edb8-4cdd-a3d7-3438c83ed638.mp4
++ out=videos/newyork/statue_of_liberty.mp4
++ echo '[statue_of_liberty] curl ...'
+[statue_of_liberty] curl ...
++ curl -fsSL -o videos/newyork/statue_of_liberty.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498427290104/ecb90156-edb8-4cdd-a3d7-3438c83ed638.mp4
++ rc=0
++ echo '[statue_of_liberty] exit=0'
+[statue_of_liberty] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/newyork/statue_of_liberty.mp4
+-rw-r--r-- 1 runner runner 2156162 Oct 19 21:39 videos/newyork/statue_of_liberty.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[3].name' pending_everygen/newyork.json
++ name=brooklyn_bridge
+++ jq -r '.clips[3].url' pending_everygen/newyork.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498742862160/b4c5d431-a5a5-447f-b52a-0d79f799fc93.mp4
++ out=videos/newyork/brooklyn_bridge.mp4
++ echo '[brooklyn_bridge] curl ...'
+[brooklyn_bridge] curl ...
++ curl -fsSL -o videos/newyork/brooklyn_bridge.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/447498742862160/b4c5d431-a5a5-447f-b52a-0d79f799fc93.mp4
++ rc=0
++ echo '[brooklyn_bridge] exit=0'
+[brooklyn_bridge] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/newyork/brooklyn_bridge.mp4
+-rw-r--r-- 1 runner runner 2934975 Oct 19 21:39 videos/newyork/brooklyn_bridge.mp4
++ ls -la videos/newyork
+total 10908
+drwxr-xr-x 2 runner runner    4096 Oct 19 21:39 .
+drwxr-xr-x 3 runner runner    4096 Oct 19 21:39 ..
+-rw-r--r-- 1 runner runner 2934975 Oct 19 21:39 brooklyn_bridge.mp4
+-rw-r--r-- 1 runner runner 2324901 Oct 19 21:39 central_park.mp4
+-rw-r--r-- 1 runner runner 3737577 Oct 19 21:39 empire_state_building.mp4
+-rw-r--r-- 1 runner runner 2156162 Oct 19 21:39 statue_of_liberty.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_everygen/newyork.json
+rm 'pending_everygen/newyork.json'
++ IFS=
++ read -r manifest
++ exit 0
