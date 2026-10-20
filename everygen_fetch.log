@@ -107,3 +107,217 @@ rm 'pending_everygen/newyork.json'
 + IFS=
 + read -r manifest
 + exit 0
++ overall_rc=0
++ IFS=
++ read -r manifest
++ '[' -z pending_everygen/chicago.json ']'
++ '[' '!' -f pending_everygen/chicago.json ']'
++ echo '=== pending_everygen/chicago.json ==='
+=== pending_everygen/chicago.json ===
++ cat pending_everygen/chicago.json
+{
+  "slug": "chicago",
+  "clips": [
+    {
+      "name": "willis_tower",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211905-6cjr5/12b7bf65-506e-4576-8783-88a1336f2885.mp4"
+    },
+    {
+      "name": "cloud_gate",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211925-q2dxc/72b0382d-efeb-40c2-8213-d06898f7d7d9.mp4"
+    },
+    {
+      "name": "mccormick_place",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211950-kcjc5/c671dff5-bd11-48bd-9337-c6b3a6d1b3ac.mp4"
+    },
+    {
+      "name": "navy_pier",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014212009-zn8v2/2dec63b6-ddd8-4879-97a9-5eaa29b21c5a.mp4"
+    }
+  ]
+}
+++ jq -r .slug pending_everygen/chicago.json
++ slug=chicago
+++ jq -r '.clips | length' pending_everygen/chicago.json
++ n=4
++ mkdir -p videos/chicago
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[0].name' pending_everygen/chicago.json
++ name=willis_tower
+++ jq -r '.clips[0].url' pending_everygen/chicago.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211905-6cjr5/12b7bf65-506e-4576-8783-88a1336f2885.mp4
++ out=videos/chicago/willis_tower.mp4
++ echo '[willis_tower] curl ...'
+[willis_tower] curl ...
++ curl -fsSL -o videos/chicago/willis_tower.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211905-6cjr5/12b7bf65-506e-4576-8783-88a1336f2885.mp4
++ rc=0
++ echo '[willis_tower] exit=0'
+[willis_tower] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/chicago/willis_tower.mp4
+-rw-r--r-- 1 runner runner 4349255 Oct 20 21:05 videos/chicago/willis_tower.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[1].name' pending_everygen/chicago.json
++ name=cloud_gate
+++ jq -r '.clips[1].url' pending_everygen/chicago.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211925-q2dxc/72b0382d-efeb-40c2-8213-d06898f7d7d9.mp4
++ out=videos/chicago/cloud_gate.mp4
++ echo '[cloud_gate] curl ...'
+[cloud_gate] curl ...
++ curl -fsSL -o videos/chicago/cloud_gate.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211925-q2dxc/72b0382d-efeb-40c2-8213-d06898f7d7d9.mp4
++ rc=0
++ echo '[cloud_gate] exit=0'
+[cloud_gate] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/chicago/cloud_gate.mp4
+-rw-r--r-- 1 runner runner 4309323 Oct 20 21:06 videos/chicago/cloud_gate.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[2].name' pending_everygen/chicago.json
++ name=mccormick_place
+++ jq -r '.clips[2].url' pending_everygen/chicago.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211950-kcjc5/c671dff5-bd11-48bd-9337-c6b3a6d1b3ac.mp4
++ out=videos/chicago/mccormick_place.mp4
++ echo '[mccormick_place] curl ...'
+[mccormick_place] curl ...
++ curl -fsSL -o videos/chicago/mccormick_place.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211950-kcjc5/c671dff5-bd11-48bd-9337-c6b3a6d1b3ac.mp4
++ rc=0
++ echo '[mccormick_place] exit=0'
+[mccormick_place] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/chicago/mccormick_place.mp4
+-rw-r--r-- 1 runner runner 4120715 Oct 20 21:06 videos/chicago/mccormick_place.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[3].name' pending_everygen/chicago.json
++ name=navy_pier
+++ jq -r '.clips[3].url' pending_everygen/chicago.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014212009-zn8v2/2dec63b6-ddd8-4879-97a9-5eaa29b21c5a.mp4
++ out=videos/chicago/navy_pier.mp4
++ echo '[navy_pier] curl ...'
+[navy_pier] curl ...
++ curl -fsSL -o videos/chicago/navy_pier.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014212009-zn8v2/2dec63b6-ddd8-4879-97a9-5eaa29b21c5a.mp4
++ rc=0
++ echo '[navy_pier] exit=0'
+[navy_pier] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/chicago/navy_pier.mp4
+-rw-r--r-- 1 runner runner 3993359 Oct 20 21:06 videos/chicago/navy_pier.mp4
++ ls -la videos/chicago
+total 16396
+drwxr-xr-x 2 runner runner    4096 Oct 20 21:06 .
+drwxr-xr-x 4 runner runner    4096 Oct 20 21:05 ..
+-rw-r--r-- 1 runner runner 4309323 Oct 20 21:06 cloud_gate.mp4
+-rw-r--r-- 1 runner runner 4120715 Oct 20 21:06 mccormick_place.mp4
+-rw-r--r-- 1 runner runner 3993359 Oct 20 21:06 navy_pier.mp4
+-rw-r--r-- 1 runner runner 4349255 Oct 20 21:05 willis_tower.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_everygen/chicago.json
+rm 'pending_everygen/chicago.json'
++ IFS=
++ read -r manifest
++ '[' -z pending_everygen/lasvegas.json ']'
++ '[' '!' -f pending_everygen/lasvegas.json ']'
++ echo '=== pending_everygen/lasvegas.json ==='
+=== pending_everygen/lasvegas.json ===
++ cat pending_everygen/lasvegas.json
+{
+  "slug": "lasvegas",
+  "clips": [
+    {
+      "name": "stratosphere_tower",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-4b4b-7c73-98ad-1bbfbbeb2e3c/74a16a99-3d3e-41b2-8cd5-68e7122f217d.mp4"
+    },
+    {
+      "name": "bellagio_fountains",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-940e-7852-a82d-5346e53dab32/c17e63f4-eb91-4159-b00e-895247c4c929.mp4"
+    },
+    {
+      "name": "hoover_dam",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-a8fb-72f3-84fe-5d71a84401f8/5d313319-263c-43f2-82cb-8275a76104d4.mp4"
+    },
+    {
+      "name": "luxor_pyramid",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-d22b-7a23-8a7d-006e43f422a1/04951870-4903-450f-9b23-da5c49e9c47b.mp4"
+    }
+  ]
+}
+++ jq -r .slug pending_everygen/lasvegas.json
++ slug=lasvegas
+++ jq -r '.clips | length' pending_everygen/lasvegas.json
++ n=4
++ mkdir -p videos/lasvegas
+++ seq 0 3
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[0].name' pending_everygen/lasvegas.json
++ name=stratosphere_tower
+++ jq -r '.clips[0].url' pending_everygen/lasvegas.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-4b4b-7c73-98ad-1bbfbbeb2e3c/74a16a99-3d3e-41b2-8cd5-68e7122f217d.mp4
++ out=videos/lasvegas/stratosphere_tower.mp4
++ echo '[stratosphere_tower] curl ...'
+[stratosphere_tower] curl ...
++ curl -fsSL -o videos/lasvegas/stratosphere_tower.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-4b4b-7c73-98ad-1bbfbbeb2e3c/74a16a99-3d3e-41b2-8cd5-68e7122f217d.mp4
++ rc=0
++ echo '[stratosphere_tower] exit=0'
+[stratosphere_tower] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/lasvegas/stratosphere_tower.mp4
+-rw-r--r-- 1 runner runner 13507703 Oct 20 21:06 videos/lasvegas/stratosphere_tower.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[1].name' pending_everygen/lasvegas.json
++ name=bellagio_fountains
+++ jq -r '.clips[1].url' pending_everygen/lasvegas.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-940e-7852-a82d-5346e53dab32/c17e63f4-eb91-4159-b00e-895247c4c929.mp4
++ out=videos/lasvegas/bellagio_fountains.mp4
++ echo '[bellagio_fountains] curl ...'
+[bellagio_fountains] curl ...
++ curl -fsSL -o videos/lasvegas/bellagio_fountains.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-940e-7852-a82d-5346e53dab32/c17e63f4-eb91-4159-b00e-895247c4c929.mp4
++ rc=0
++ echo '[bellagio_fountains] exit=0'
+[bellagio_fountains] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/lasvegas/bellagio_fountains.mp4
+-rw-r--r-- 1 runner runner 17578580 Oct 20 21:06 videos/lasvegas/bellagio_fountains.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[2].name' pending_everygen/lasvegas.json
++ name=hoover_dam
+++ jq -r '.clips[2].url' pending_everygen/lasvegas.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-a8fb-72f3-84fe-5d71a84401f8/5d313319-263c-43f2-82cb-8275a76104d4.mp4
++ out=videos/lasvegas/hoover_dam.mp4
++ echo '[hoover_dam] curl ...'
+[hoover_dam] curl ...
++ curl -fsSL -o videos/lasvegas/hoover_dam.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-a8fb-72f3-84fe-5d71a84401f8/5d313319-263c-43f2-82cb-8275a76104d4.mp4
++ rc=0
++ echo '[hoover_dam] exit=0'
+[hoover_dam] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/lasvegas/hoover_dam.mp4
+-rw-r--r-- 1 runner runner 12802398 Oct 20 21:06 videos/lasvegas/hoover_dam.mp4
++ for i in $(seq 0 $((n - 1)))
+++ jq -r '.clips[3].name' pending_everygen/lasvegas.json
++ name=luxor_pyramid
+++ jq -r '.clips[3].url' pending_everygen/lasvegas.json
++ url=https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-d22b-7a23-8a7d-006e43f422a1/04951870-4903-450f-9b23-da5c49e9c47b.mp4
++ out=videos/lasvegas/luxor_pyramid.mp4
++ echo '[luxor_pyramid] curl ...'
+[luxor_pyramid] curl ...
++ curl -fsSL -o videos/lasvegas/luxor_pyramid.mp4 https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/01a1355a-d22b-7a23-8a7d-006e43f422a1/04951870-4903-450f-9b23-da5c49e9c47b.mp4
++ rc=0
++ echo '[luxor_pyramid] exit=0'
+[luxor_pyramid] exit=0
++ '[' 0 -ne 0 ']'
++ ls -la videos/lasvegas/luxor_pyramid.mp4
+-rw-r--r-- 1 runner runner 12566523 Oct 20 21:06 videos/lasvegas/luxor_pyramid.mp4
++ ls -la videos/lasvegas
+total 55144
+drwxr-xr-x 2 runner runner     4096 Oct 20 21:06 .
+drwxr-xr-x 5 runner runner     4096 Oct 20 21:06 ..
+-rw-r--r-- 1 runner runner 17578580 Oct 20 21:06 bellagio_fountains.mp4
+-rw-r--r-- 1 runner runner 12802398 Oct 20 21:06 hoover_dam.mp4
+-rw-r--r-- 1 runner runner 12566523 Oct 20 21:06 luxor_pyramid.mp4
+-rw-r--r-- 1 runner runner 13507703 Oct 20 21:06 stratosphere_tower.mp4
++ '[' 0 -eq 0 ']'
++ git rm pending_everygen/lasvegas.json
+rm 'pending_everygen/lasvegas.json'
++ IFS=
++ read -r manifest
++ exit 0
