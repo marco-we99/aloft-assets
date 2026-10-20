@@ -1,0 +1,21 @@
+{
+  "slug": "chicago",
+  "clips": [
+    {
+      "name": "willis_tower",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211905-6cjr5/12b7bf65-506e-4576-8783-88a1336f2885.mp4"
+    },
+    {
+      "name": "cloud_gate",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211925-q2dxc/72b0382d-efeb-40c2-8213-d06898f7d7d9.mp4"
+    },
+    {
+      "name": "mccormick_place",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014211950-kcjc5/c671dff5-bd11-48bd-9337-c6b3a6d1b3ac.mp4"
+    },
+    {
+      "name": "navy_pier",
+      "url": "https://media.viewmax.io/users/KWPFDYNic3RJRhst3p0bg3uRKd0aDMDu/sora-videos/cgt-20261014212009-zn8v2/2dec63b6-ddd8-4879-97a9-5eaa29b21c5a.mp4"
+    }
+  ]
+}
