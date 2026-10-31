@@ -52,6 +52,18 @@
               "posted_at": "2026-10-14T12:55:07.037664Z"
             }
           ]
+        },
+        {
+          "reel_id": "lasvegas-v2-2026-10-31",
+          "created_at": "2026-10-31T23:16:47.762104Z",
+          "landmarks": [
+            "Fremont Street Experience",
+            "Caesars Palace",
+            "The Sphere"
+          ],
+          "composed_url": "https://s3.us-west-2.amazonaws.com/remotionlambda-uswest2-plg7c2915l/renders/w59fifr88p/out.mp4",
+          "note": "Headline-Reel Mode (3 x 6s H3 Max v2v, ~22.5s). Sphere displays rotating NASA Blue Marble Earth on Exosphere.",
+          "posted": []
         }
       ]
     },
